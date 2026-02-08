@@ -32,6 +32,8 @@ export default function AboutPage() {
           <h1>Ilias Hamdaoui</h1>
           <p>Junior Developer in opleiding - AP Hogeschool Antwerpen</p>
           <p>Stagebedrijf: TheValueChain (SAP consultancy)</p>
+          <p>Locatie: Antwerpen, België (hybride)</p>
+          <p>Rol: Developer Intern</p>
 
           <div className="social-links">
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
