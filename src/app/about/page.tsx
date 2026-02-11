@@ -1,46 +1,23 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Over"
 };
-
-const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "C#",
-  "ASP.NET Core",
-  "SQL",
-  "SAP Context",
-  "Git & CI/CD"
-];
 
 export default function AboutPage() {
   return (
     <section className="about-page reveal">
       <div className="about-grid">
         <article className="profile-card">
-          <Image
-            src="/ilias-profile-placeholder.svg"
-            alt="Profielfoto van Ilias Hamdaoui"
-            width={300}
-            height={300}
-            className="profile-image"
-            priority
-          />
           <h1>Ilias Hamdaoui</h1>
-          <p>Junior Developer in opleiding - AP Hogeschool Antwerpen</p>
+          <p>Stagiair Softwareontwikkeling - AP Hogeschool Antwerpen</p>
           <p>Stagebedrijf: TheValueChain (SAP consultancy)</p>
           <p>Locatie: Antwerpen, België (hybride)</p>
-          <p>Rol: Developer Intern</p>
+          <p>Rol: Stagiair</p>
 
           <div className="social-links">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a href="https://github.com/Ilias492610" target="_blank" rel="noreferrer">
-              GitHub
+            <a href="/Ilias-Hamdaoui-CV.pdf" target="_blank" rel="noreferrer">
+              Bekijk mijn CV (PDF)
             </a>
           </div>
         </article>
@@ -48,35 +25,25 @@ export default function AboutPage() {
         <article className="content-card">
           <h2>Mini cv</h2>
           <p>
-            Ik ben een gemotiveerde student programmeren met focus op webontwikkeling,
-            backendlogica en onderhoudbare code. Tijdens mijn stage werk ik in een
-            professionele consultancycontext waarin technische kwaliteit en businessimpact
-            samenkomen.
+            Ik ben een gemotiveerde student programmeren aan AP Hogeschool Antwerpen.
+            Tijdens mijn stage bij TheValueChain focus ik op het opbouwen van sterke
+            functionele en technische basiskennis binnen SAP CPQ.
           </p>
 
           <h2>Stagecontext</h2>
           <p>
-            Bij TheValueChain ondersteun ik development-trajecten binnen SAP-gerelateerde
-            omgevingen. Ik werk mee aan features, bugfixes, code reviews en analyses van
-            productieproblemen. Mijn rol groeit geleidelijk van uitvoerend naar proactief,
-            met meer ownership per sprint.
+            Mijn eerste stageweek draaide rond onboarding, kennismaking met het team en
+            intensieve CPQ-trainingen. Ik kreeg een duidelijke roadmap van Jan en Steven,
+            werkte functioneel rond de CPQ-fundamentals en begon daarna aan technische
+            scripting met IronPython binnen CPQ.
           </p>
 
-          <h2>Focus tijdens deze stage</h2>
+          <h2>Focus op dit moment</h2>
           <ul>
-            <li>Betere besluitvorming in complexe technische context.</li>
-            <li>Strakkere codekwaliteit via duidelijke structuur en review feedback.</li>
-            <li>Sterkere communicatie tussen development en business.</li>
+            <li>CPQ functioneel volledig begrijpen: producten, pricing, quotes en approval.</li>
+            <li>CPQ technisch toepassen via scripts in verschillende modules.</li>
+            <li>Sneller verbanden leggen tussen CPQ en het bredere SAP/BTP-verhaal.</li>
           </ul>
-
-          <h2>Technische skills</h2>
-          <div className="tag-list">
-            {skills.map((skill) => (
-              <span key={skill} className="tag tag--solid">
-                {skill}
-              </span>
-            ))}
-          </div>
         </article>
       </div>
     </section>

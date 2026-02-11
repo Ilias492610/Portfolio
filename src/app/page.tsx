@@ -14,11 +14,12 @@ export default function HomePage() {
       <section className="hero reveal">
         <p className="eyebrow">WPL Stageportfolio</p>
         <h1>
-          Mijn stagejournaal als developer bij <span>TheValueChain</span>
+          Mijn stageblog bij <span>TheValueChain</span>
         </h1>
         <p className="hero__text">
-          Ik ben Ilias Hamdaoui. Op deze website deel ik wekelijks mijn voortgang,
-          technische uitdagingen, lessons learned en momenten waar ik trots op ben.
+          Ik ben Ilias Hamdaoui, stagiair softwareontwikkeling. Op deze website
+          deel ik mijn stageverloop bij TheValueChain, met focus op onboarding,
+          CPQ-trainingen en mijn eerste technische stappen binnen SAP-context.
         </p>
         <div className="hero__actions">
           <Link href="/blog" className="button button--primary">
@@ -44,7 +45,7 @@ export default function HomePage() {
 
       <section className="reveal" style={{ animationDelay: "180ms" }}>
         <div className="section-title-row">
-          <h2>Recente highlights</h2>
+          <h2>Highlights uit Week 1</h2>
           <Link href="/blog" className="inline-link">
             Alle posts
           </Link>
@@ -54,15 +55,6 @@ export default function HomePage() {
             <BlogCard key={post.slug} post={post} delay={index * 70} />
           ))}
         </div>
-      </section>
-
-      <section className="why reveal" style={{ animationDelay: "240ms" }}>
-        <h2>Waarom dit portfolio?</h2>
-        <ul>
-          <li>Transparant overzicht voor mentor en stagebegeleider.</li>
-          <li>Reflectie op code, samenwerking en professionele groei.</li>
-          <li>Herbruikbaar als professioneel portfolio na mijn stage.</li>
-        </ul>
       </section>
     </>
   );

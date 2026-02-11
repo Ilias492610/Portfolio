@@ -13,7 +13,6 @@ export function BlogCard({ post, delay = 0 }: BlogCardProps) {
     <article className="post-card reveal" style={{ animationDelay: `${delay}ms` }}>
       <div className="post-card__meta">
         <span>{formatDate(post.date)}</span>
-        <span>{post.readingMinutes} min lezen</span>
       </div>
 
       <h3>{post.title}</h3>
