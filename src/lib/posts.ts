@@ -11,6 +11,146 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-2-van-training-naar-projectstart",
+    title: "Week 2: Van Training naar Projectstart",
+    date: "2026-02-14",
+    excerpt:
+      "In week 2 verschoof de focus van pure training naar een concreet stageproject: de LaPoste indexatie-app.",
+    intro:
+      "Na de basis van week 1 begon alles samen te vallen: CPQ, API's, BTP, CAP, Cloud Foundry en Fiori kregen een duidelijke plaats binnen mijn project.",
+    readingMinutes: 8,
+    tags: ["cpq", "btp", "projectstart"],
+    content: `Week 2 – Van Training naar Projectstart
+
+Na een eerste week vol onboarding en basisopleiding in CPQ, begon week 2 meteen een stuk concreter aan te voelen. Waar week 1 draaide rond begrijpen wat CPQ is en hoe het werkt, ging week 2 meer richting: wat ga ik hier effectief bouwen?
+
+Technische training afgerond
+
+Op dinsdag werkte ik mijn technische CPQ-training verder af. Ik was geëindigd bij het onderdeel rond API's en dat was meteen ook een belangrijk stuk voor mijn stageproject.
+
+Ik leerde hoe je:
+
+API's kan aanspreken vanuit CPQ
+
+Data kan ophalen (zoals quotes en items)
+
+Scripts kan uitvoeren via een custom API
+
+Een nieuwe revisie kan aanmaken via scripting
+
+Dat sloot perfect aan bij het project waar ik later die week uitleg over kreeg.
+
+Eerste echte BTP-intro
+
+Woensdag had ik opnieuw een meeting met Robin. Deze keer ging het dieper over:
+
+SAP BTP
+
+CAP (Cloud Application Programming Model)
+
+CF (Cloud Foundry)
+
+Fiori
+
+Tot dan toe kende ik vooral de CPQ-kant. Nu begon ik te zien hoe CPQ past binnen het grotere SAP-landschap.
+
+Heel simpel uitgelegd:
+
+BTP is het platform waarop je applicaties bouwt en uitbreidingen maakt.
+
+CAP gebruik je om backend services te bouwen.
+
+Cloud Foundry is de runtime waarop je applicatie draait.
+
+Fiori is de frontend (de gebruikersinterface).
+
+Na die meeting kreeg ik enkele officiële SAP Learning Journeys om te volgen, zodat ik technisch beter voorbereid zou zijn om mijn project correct op te zetten.
+
+Projectvoorstelling: De LaPoste Indexatie App
+
+Donderdag was een drukke dag met veel meetings. De belangrijkste was die met Daoud, Steven en Jan. Daar kreeg ik een presentatie over het project waaraan ik tijdens mijn stage zal werken: de indexatie-app voor LaPoste.
+
+Het doel van de applicatie is:
+
+Quotes of contracten ophalen uit CPQ, een indexatiepercentage toepassen op (alle) items en dit correct verwerken in CPQ, inclusief het aanmaken van een nieuwe revisie.
+
+De globale flow van de applicatie ziet er als volgt uit:
+
+Een scherm waar alle quotes/contracten van een klant worden opgehaald.
+
+De gebruiker selecteert een quote.
+
+De gebruiker vult een indexatiepercentage in.
+
+De applicatie stuurt dit naar CPQ.
+
+In CPQ wordt:
+
+Een nieuwe revisie aangemaakt.
+
+Een custom field "Indexation" gevuld.
+
+Een custom calculation uitgevoerd op de Net Price.
+
+De quote herberekend.
+
+Wat dit technisch uitdagend maakt:
+
+CPQ heeft niet standaard alle API's die we nodig hebben.
+
+We moeten een custom API maken die:
+
+De indexatie ontvangt.
+
+Een nieuwe revisie aanmaakt.
+
+De indexatie toepast op alle items.
+
+De quote herberekent.
+
+Daarnaast zal dit eerst gebouwd worden in een trainingsomgeving en daarna overgezet worden naar de demo-tenant "SAP CPQ Indexation 1".
+
+Toen ik deze presentatie kreeg, viel alles wat ik in week 1 geleerd had ineens samen. De scripting, de custom fields, de API's... het was niet meer theorie, maar een echte use case.
+
+CPQ Unit Day & Stagebespreking
+
+In de namiddag hadden we een CPQ Unit Day. Daar werd een presentatie gegeven over nieuwe SAP-updates rond CPQ. Interessant om te zien hoe het product blijft evolueren.
+
+Daarna kwam mijn stagebegeleider langs om het verloop van de werkplekleren-stage (WPL) te bespreken: verwachtingen, opvolging en communicatie. Dat maakte alles officieel en gaf extra duidelijkheid over wat er van mij verwacht wordt.
+
+'s Avonds gingen we met het hele team eten op restaurant. Dat was een leuke afsluiter van een drukke dag en ik heb het team daar beter leren kennen in een meer informele sfeer.
+
+Gumption Game Night
+
+Woensdagavond was er ook nog een gameavond georganiseerd door Gumption (het moederbedrijf). Ik ben daar ook naartoe gegaan en kwam daar toevallig een klasgenoot tegen die stage doet bij Brightest. Het was leuk om ook mensen buiten mijn directe team te leren kennen.
+
+BTP & Cloud Foundry Training
+
+Vrijdag werkte ik mijn BTP-training verder af en begon ik met de training rond Cloud Foundry. Dat voelde opnieuw als een stap richting het effectief bouwen van mijn applicatie.
+
+Waar week 1 vooral CPQ-gericht was, begon week 2 echt de brug te slaan tussen:
+
+CPQ (waar de data zit)
+
+BTP (waar de app gebouwd wordt)
+
+CAP & CF (waar de logica draait)
+
+Fiori (wat de gebruiker ziet)
+
+Reflectie
+
+Week 2 voelde als een kantelpunt.
+
+In week 1 leerde ik hoe CPQ werkt. In week 2 begon ik te begrijpen wat mijn concrete bijdrage zal zijn.
+
+De indexatie-app is technisch uitdagend, maar tegelijk heel logisch opgebouwd. Het is geen oefenproject, maar een echte business case met een duidelijke flow en impact.
+
+Ik merk dat alles wat ik leer - scripting, API's, BTP - stap voor stap samenkomt in een groter geheel.
+
+En dat maakt het extra motiverend.`
+  },
+  {
     slug: "week-1-onboarding-bij-thevaluechain",
     title: "Week 1: Onboarding bij TheValueChain",
     date: "2026-02-07",

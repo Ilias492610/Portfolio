@@ -18,14 +18,6 @@ export function BlogCard({ post, delay = 0 }: BlogCardProps) {
       <h3>{post.title}</h3>
       <p>{post.excerpt}</p>
 
-      <div className="tag-list" aria-label="Tags">
-        {post.tags.map((tag) => (
-          <span key={tag} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
-
       <Link href={`/blog/${post.slug}`} className="inline-link">
         Lees blogpost
       </Link>

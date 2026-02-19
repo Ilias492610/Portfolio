@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { BlogFilter } from "@/components/blog-filter";
+import { BlogCard } from "@/components/blog-card";
 import { getSortedPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -14,14 +14,17 @@ export default function BlogPage() {
     <>
       <section className="blog-header reveal">
         <p className="eyebrow">Stageblog</p>
-        <h1>Wekelijkse updates, wins en lessons learned</h1>
-        <p>
-          Filter posts op tags zoals <strong>code</strong>, <strong>reflectie</strong>,
-          <strong> wins</strong> of <strong>teambuilding</strong>.
-        </p>
+        <h1>Wekelijkse updates en lessons learned</h1>
+        <p>Overzicht van mijn blogposts tijdens de stage.</p>
       </section>
 
-      <BlogFilter posts={posts} />
+      <section>
+        <div className="post-grid">
+          {posts.map((post, index) => (
+            <BlogCard key={post.slug} post={post} delay={index * 60} />
+          ))}
+        </div>
+      </section>
     </>
   );
 }

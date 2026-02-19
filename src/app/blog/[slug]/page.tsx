@@ -120,14 +120,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <h1>{post.title}</h1>
       <p className="blog-post__intro">{post.intro}</p>
 
-      <div className="tag-list" aria-label="Tags van dit artikel">
-        {post.tags.map((tag) => (
-          <span key={tag} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
-
       <div className="blog-post__content">{renderContent(post.content)}</div>
     </article>
   );
