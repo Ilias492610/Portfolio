@@ -11,6 +11,190 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-3-van-blueprint-naar-architectuur",
+    title: "Week 3: Van Blueprint naar Architectuur",
+    date: "2026-02-21",
+    excerpt:
+      "Week 3 draaide om verdieping, architectuurkeuzes en het uitwerken van een onderbouwde blueprint voor de indexatie-app.",
+    intro:
+      "De focus verschoof van use case-begrip naar een technisch correcte en professioneel gedocumenteerde oplossing met duidelijke scope en planning.",
+    readingMinutes: 9,
+    tags: ["architectuur", "fiori", "cpq"],
+    content: `Week 3 – Van Blueprint naar Architectuur
+
+Week 3 stond volledig in het teken van verdieping en structureren. Waar week 2 draaide rond het begrijpen van de use case en het grotere geheel, ging week 3 over het concreet maken van mijn oplossing: technisch correct, logisch opgebouwd en onderbouwd in een blueprint.
+
+Fiori-training afgerond
+
+Deze week werkte ik mijn SAP Fiori elements training verder af. De opleiding focuste op het bouwen van een SAP Fiori elements applicatie op basis van een CAP OData V4 service, binnen SAP Business Application Studio.
+
+De cursus behandelde onder andere:
+
+Overzicht van SAP Fiori elements voor OData V4
+
+SAP Fiori Tools
+
+List Report en Object Page templates
+
+Filter bars en table configuratie
+
+Actions op List Reports
+
+Multiple views
+
+Header- en body-configuratie
+
+Validaties en dynamic field control
+
+Navigation concept
+
+Analytical List Page
+
+Flexibility via het programming model
+
+Wat ik hier vooral uit meenam, is dat Fiori elements veel standaardfunctionaliteit biedt. Je bouwt niet alles zelf, maar configureert slimme templates. Dat past perfect bij mijn indexatie-app, die bestaat uit:
+
+Een lijst van quotes/contracten
+
+Een detailpagina met items
+
+Een actie om indexatie toe te passen
+
+De training duurde wel wat langer dan verwacht. Ik heb er dinsdag nog verder aan gewerkt om alles goed te begrijpen in plaats van het snel af te ronden.
+
+Gesprek met Robin – vragen stellen over architectuur
+
+Dinsdag had ik een gesprek met Robin om mijn openstaande vragen te bespreken. Vooral rond:
+
+Hoe de CAP-service precies communiceert met CPQ
+
+Waar authenticatie gebeurt
+
+Hoe Destinations correct worden gebruikt
+
+Hoe we de custom API in CPQ best structureren
+
+Dat gesprek hielp mij om mijn architectuur duidelijker te zien. De indexatie-app wordt gebouwd als side-by-side extensie op SAP BTP, met een CAP backend en een Fiori frontend. De connectie naar CPQ gebeurt via OAuth2 en de Destination service, zodat credentials niet in de code staan.
+
+Het werd steeds duidelijker dat dit project niet alleen over CPQ scripting gaat, maar over een volledige end-to-end integratie.
+
+Start van mijn Blueprint
+
+Na het gesprek ben ik gestart met het schrijven van mijn blueprint. Ik heb de officiele bachelor-template gebruikt en die volledig ingevuld voor mijn project: Indexatie Applicatie La Poste.
+
+Hoewel we binnen Graduaat Programmeren minder focussen op formele diagrammen, heb ik via zelfstudie en herinneringen van vorig semester (ons groepswerk) mijn eigen diagrammen uitgewerkt:
+
+Use case diagram
+
+Activity diagram van de toekomstige flow
+
+Architectuurdiagram op SAP BTP
+
+Integratieoverzicht met CPQ
+
+Wat beschrijft mijn blueprint concreet?
+
+De kern van het proces is als volgt:
+
+Quotes/contracten ophalen uit CPQ
+
+Een document selecteren
+
+Een indexatiepercentage ingeven
+
+Een nieuwe revision laten aanmaken
+
+Herberekening uitvoeren
+
+Dit komt rechtstreeks overeen met het proces dat in het LaPoste-document beschreven wordt.
+
+Belangrijke technische elementen die ik heb uitgewerkt:
+
+OAuth2 authenticatie via /oauth2/token
+
+Quote list API
+
+Quote detail API
+
+Quote items (paginated)
+
+Custom CPQ API via /customapi/executescript
+
+Omdat CPQ niet standaard alle functionaliteit aanbiedt die we nodig hebben, moet er een custom API-script gemaakt worden dat:
+
+Een nieuwe revision aanmaakt
+
+Het custom field "Indexation" vult
+
+De quote herberekent
+
+Dat volledige proces heb ik technisch uitgeschreven in mijn Technisch Design hoofdstuk.
+
+Drie dagen volledig op specs en architectuur
+
+Volgens mijn planning heb ik gewerkt aan:
+
+18 februari – Create specs and architecture
+
+19 februari – Create specs and architecture
+
+20 februari – Create specs and architecture
+
+Deze dagen stonden volledig in het teken van structureren:
+
+Functionele scope uitschrijven
+
+Use cases herwerken
+
+MVP correct positioneren
+
+Security en rollen definieren
+
+Integraties documenteren
+
+Planning herschrijven naar 4 weken
+
+Ik heb meerdere versies gemaakt (v0.01 tot v0.04) en telkens verder verfijnd.
+
+Feedbackmoment op donderdag
+
+Donderdag had ik opnieuw een gesprek waarin ik mijn blueprint heb voorgesteld. Ik kreeg heel wat feedback, onder andere over:
+
+De formulering van de use cases
+
+De positionering van het MVP
+
+Het duidelijker opsplitsen van functioneel en technisch design
+
+Het formeler uitschrijven van uitzonderingen en foutscenario's
+
+Consistentie in terminologie
+
+Dat moment was belangrijk. Ik merkte dat een technisch idee hebben een ding is, maar het correct en professioneel documenteren iets helemaal anders.
+
+Wat heb ik deze week echt geleerd?
+
+Week 3 voelde minder hands-on coding en meer denken als een architect.
+
+Ik heb geleerd:
+
+Hoe je een businessprobleem vertaalt naar een gestructureerde oplossing
+
+Hoe je een POC scope duidelijk afbakent
+
+Hoe belangrijk security en rollen zijn, zelfs in een demo
+
+Hoe CAP, Fiori en CPQ logisch in elkaar passen
+
+Hoe je een technisch verhaal correct documenteert
+
+Waar week 1 draaide rond leren wat CPQ is, en week 2 rond begrijpen wat ik ga bouwen, draaide week 3 rond het professioneel onderbouwen van mijn oplossing.
+
+Het project voelt nu niet meer als een idee, maar als een uitgewerkte architectuur met duidelijke stappen, scope en planning.
+
+Volgende stap: effectief beginnen bouwen.`
+  },
+  {
     slug: "week-2-van-training-naar-projectstart",
     title: "Week 2: Van Training naar Projectstart",
     date: "2026-02-14",
