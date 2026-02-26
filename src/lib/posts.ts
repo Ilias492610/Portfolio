@@ -11,6 +11,44 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-4-van-blueprint-naar-opstart",
+    title: "Week 4: Van Blueprint naar Opstart",
+    date: "2026-02-28",
+    excerpt:
+      "Week 4 draaide rond de laatste blueprint-feedback, de presentatie en de echte start van mijn project in CPQ.",
+    intro:
+      "Na het afronden en verdedigen van mijn blueprint ben ik gestart met de praktische opbouw van het project, inclusief testdata en voorbereiding volgens het stappenplan.",
+    readingMinutes: 6,
+    tags: ["blueprint", "projectstart", "cpq"],
+    content: `Week 4 – Van Blueprint naar Opstart
+
+Week 4 stond in het teken van afronden en starten. Ik was nog bezig met de laatste verbeteringen aan mijn blueprint, maar tegelijk kwam ook het moment dichterbij om effectief aan de applicatie te beginnen.
+
+Laatste feedback op de blueprint
+
+Op maandag kreeg ik nog de laatste feedback om mijn blueprint volledig af te werken. Een belangrijke aanpassing was dat ik mijn activity diagram heb vervangen door een sequence diagram, zodat de technische flow en interacties duidelijker en correcter beschreven werden.
+
+Presentatie verschoven naar donderdag
+
+Normaal gezien zou ik mijn presentatie op maandag geven, maar ik had de inschatting wat onderschat. Daarom heb ik de presentatie uiteindelijk op donderdag gegeven voor Robin, Steven en Jan.
+
+Tijdens die presentatie heb ik mijn blueprint toegelicht, vragen gesteld en extra feedback meegenomen om alles scherp te zetten.
+
+Echte start van het project
+
+Na de presentatie ben ik eindelijk gestart met de concrete uitwerking van het project.
+
+Ik ben begonnen met:
+
+Testdata aanmaken in CPQ
+
+De blueprint opnieuw controleren
+
+Het afgesproken stappenplan erbij nemen en verder uitbreiden
+
+Deze week voelde als de overgang van documentatie naar uitvoering. De voorbereiding staat nu op punt en de volgende stap is het project technisch verder opbouwen op basis van de uitgewerkte architectuur.`
+  },
+  {
     slug: "week-3-van-blueprint-naar-architectuur",
     title: "Week 3: Van Blueprint naar Architectuur",
     date: "2026-02-21",
