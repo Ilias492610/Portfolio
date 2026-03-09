@@ -11,6 +11,108 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-5-start-van-de-ontwikkeling",
+    title: "Week 5: Start van de ontwikkeling",
+    date: "2026-03-07",
+    excerpt:
+      "Week 5 markeerde de echte technische start van het project, met API-testing in Postman en de eerste versie van het custom CPQ-script.",
+    intro:
+      "Na de voorbereiding en architectuur van de vorige weken verschoof de focus volledig naar implementatie, testen en het automatiseren van de indexatieflow in SAP CPQ.",
+    readingMinutes: 8,
+    tags: ["ontwikkeling", "api", "cpq"],
+    content: `Week 5 – Start van de ontwikkeling
+
+Week 5 was de week waarin ik eindelijk echt kon beginnen aan het technische gedeelte van mijn project. Na de voorbereiding, architectuur en blueprint van de vorige weken, ging de focus nu volledig naar het ontwikkelen en testen van de integratie met SAP CPQ.
+
+Start met API-testing in Postman
+
+Om de integratie met SAP CPQ goed te begrijpen, ben ik eerst begonnen met het testen van de verschillende API's via Postman. Dit was belangrijk om te controleren hoe de responses eruitzien en hoe de authenticatie werkt voordat ik de logica in mijn applicatie integreer.
+
+De eerste stap was het ophalen van een OAuth2 bearer token via de CPQ authenticatie-endpoint. Met dit token kon ik vervolgens de andere CPQ REST API's aanspreken.
+
+Daarna heb ik verschillende calls getest, zoals:
+
+Quotes ophalen via /api/v1/quotes
+
+Quote details ophalen via /api/v1/quotes/{quoteId}
+
+Quote items ophalen via /api/v1/quotes/{quoteId}/items
+
+Deze endpoints vormen de read flow van mijn applicatie. Hiermee kan de indexatie-app eerst alle quotes ophalen, vervolgens de details tonen en daarna de items van de geselecteerde quote laden.
+
+Door deze API's te testen in Postman kon ik exact zien:
+
+Welke velden in de responses zitten
+
+Hoe pagination werkt bij items
+
+Welke data nodig is voor mijn toekomstige Fiori interface
+
+Dit was een belangrijke stap omdat mijn applicatie uiteindelijk exact dezelfde calls zal uitvoeren via de backend.
+
+Ontwikkelen van het custom CPQ script
+
+Na het testen van de API's ben ik begonnen met het belangrijkste onderdeel van mijn project: het maken van het custom CPQ API script.
+
+Omdat SAP CPQ niet standaard alle functionaliteit aanbiedt om bulk indexatie uit te voeren, moet dit via een custom API script gebeuren dat via een endpoint kan worden aangeroepen.
+
+Het script wordt aangeroepen via:
+
+/customapi/executescript?scriptname=SCRIPTNAME
+
+Dit script ontvangt een JSON payload met onder andere:
+
+Het quoteId
+
+Het indexatiepercentage
+
+Vervolgens voert het script een aantal stappen uit binnen CPQ:
+
+De juiste quote ophalen
+
+Een nieuwe revision aanmaken zodat de historiek van de prijzen bewaard blijft
+
+Controleren of de revision actief moet worden gezet
+
+Op elk line item het custom field "Indexation" vullen met het percentage
+
+De quote opnieuw laten herberekenen zodat de nieuwe prijzen worden berekend
+
+Het doel van dit script is om het volledige indexatieproces automatisch uit te voeren, zodat een gebruiker niet meer elk item manueel moet aanpassen. Dit sluit rechtstreeks aan bij de doelstelling van de applicatie: het automatiseren van een proces dat vandaag nog volledig manueel gebeurt.
+
+Ik heb bijna de hele week gewerkt aan dit script, omdat het correct omgaan met revisions, items en recalculations in CPQ redelijk complex is. Ook moest ik regelmatig testen via Postman om te controleren of de API de juiste responses terugstuurt.
+
+Jobbeurs op woensdag
+
+Woensdag ben ik ook even langsgegaan op een jobbeurs. Daar heb ik met verschillende bedrijven gesproken en wat nieuwe contacten gelegd. Ik heb ook enkele connecties gemaakt op LinkedIn.
+
+Hoewel mijn focus momenteel volledig op mijn stage ligt, was het interessant om te zien welke bedrijven actief zijn in de sector en welke technologieen zij gebruiken.
+
+Intervisiemoment op school
+
+Op donderdag hadden we op school een intervisiemoment met andere studenten die ook op stage zijn.
+
+Iedereen vertelde kort over:
+
+Waar ze stage lopen
+
+Aan welk project ze werken
+
+Welke technologieen ze gebruiken
+
+Het was interessant om te horen hoe verschillend de stages zijn. Sommige studenten werken vooral aan webdevelopment, anderen aan data of infrastructuur. Mijn project rond SAP CPQ en SAP BTP was voor veel studenten iets minder bekend, dus het was leuk om dat ook eens uit te leggen.
+
+Reflectie
+
+Week 5 voelde voor mij als de echte start van het project.
+
+Na weken van voorbereiding kon ik eindelijk beginnen met het bouwen van de technische oplossing. Vooral het werken met de CPQ API's en het ontwikkelen van het custom script waren uitdagend, maar ook het leukste deel tot nu toe.
+
+Ik merk dat alles wat ik in de eerste weken geleerd heb - CPQ scripting, API's en architectuur - nu effectief samenkomt in de implementatie.
+
+De volgende stap is om het script volledig stabiel te krijgen en daarna de integratie met de CAP-backend en de Fiori interface verder uit te bouwen.`
+  },
+  {
     slug: "week-4-van-blueprint-naar-opstart",
     title: "Week 4: Van Blueprint naar Opstart",
     date: "2026-02-28",
