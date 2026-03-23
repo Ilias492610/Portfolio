@@ -11,6 +11,313 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-7-uitbreiding-feedback-en-deployment",
+    title: "Week 7: Uitbreiding, Feedback en Deployment",
+    date: "2026-03-21",
+    excerpt:
+      "Week 7 draaide rond extra services, de preview flow, deployment en een eerste tussentijdse evaluatie met concrete verbeterpunten.",
+    intro:
+      "Naast technische uitbreidingen aan de applicatie kreeg ik deze week gerichte feedback van mijn mentoren over de volgende stappen, zowel op technisch als communicatief vlak.",
+    readingMinutes: 9,
+    tags: ["deployment", "feedback", "cap"],
+    content: `Week 7 – Uitbreiding, Feedback en Deployment
+
+Week 7 stond vooral in het teken van verdere uitbreiding van de applicatie. Waar de vorige week draaide rond het werkend krijgen van de volledige flow, lag de focus nu op het toevoegen van extra services, het verder uitwerken van de preview flow in CAP en het deployen van de applicatie.
+
+Verder bouwen aan de applicatie
+
+Deze week heb ik mij vooral beziggehouden met:
+
+Het toevoegen van extra services
+
+Het verder uitwerken van de preview flow in het CAP gedeelte
+
+De deployment van de applicatie
+
+Hiermee begon het project stilaan meer richting een afgewerkte proof of concept te gaan. De basisflow werkte al, maar nu ging het meer over verfijning, uitbreidingen en het voorbereiden van de volgende iteraties.
+
+Gesprek met mijn mentoren
+
+Op donderdag had ik een gesprek met mijn mentoren. Tijdens dat gesprek kreeg ik vooral technisch advies van Robin over hoe ik bepaalde delen van het project nog beter kon aanpakken.
+
+Daarna heb ik ook een demo gegeven van wat er al werkte. Dat was een goed moment om te tonen hoe ver de applicatie al stond en tegelijk gerichte feedback te krijgen op de volgende stappen.
+
+Tussentijdse evaluatie
+
+Tijdens dezelfde dag hadden we ook de tussentijdse evaluatie. Daar kreeg ik te horen dat het grootste deel van mijn werk in orde was en dat de algemene feedback positief was.
+
+Het belangrijkste werkpunt dat naar voren kwam, was het communicatieve gedeelte. Voor de rest was de evaluatie vrij positief, wat wel bevestigde dat ik technisch op het juiste spoor zit.
+
+Technische feedback en aanpassingen
+
+Mijn mentoren hebben me daarna een aantal concrete suggesties gegeven om de applicatie verder te verbeteren.
+
+Voor de filters:
+
+De quote list standaard filteren op actieve revisions
+
+Status toevoegen aan de filters
+
+Extra filters voorzien voor bijvoorbeeld Sold To
+
+Voor de quote list:
+
+Quote owner toevoegen
+
+Sold to name toevoegen
+
+Status toevoegen
+
+Revision number toevoegen
+
+Name toevoegen
+
+Voor de detailpagina:
+
+Een apart tabblad tonen met involved parties
+
+Bij producten de description gebruiken in plaats van de product name
+
+Total net price bovenaan verwijderen
+
+Controleren of total amount wel het juiste bedrag toont
+
+Voor acties en technische uitbreiding:
+
+De code onderbrengen in de Git repository van TVC
+
+Extra velden toevoegen
+
+De volledige applicatie in het Engels zetten
+
+Meerdere quotes tegelijk kunnen selecteren
+
+HANA database onderzoeken of voorzien
+
+Item indexatie kunnen aanpassen en simuleren
+
+Mijn eigen nota's en vervolgstappen
+
+Ik had voor mezelf ook een aantal concrete punten genoteerd om verder uit te werken:
+
+De retrieval aanpassen en extra velden toevoegen zoals quote description, sold-to en sold-to description
+
+Een partner tab toevoegen op het quote detail scherm
+
+De Git repository van TVC gebruiken
+
+Filters en layout verder verfijnen
+
+Filter op status toevoegen
+
+Filter op sold-to toevoegen
+
+Active revision standaard op yes zetten
+
+Eventueel de statuskolom in kleur tonen
+
+Het totaal van net price bovenaan verwijderen
+
+De kolom Indexation omvormen naar Previous Indexation
+
+Alles in het Engels zetten
+
+Onderzoeken of ik een evolutie kan tonen tussen vorige en huidige extended amounts, via CAP of via een extra CPQ call
+
+Meerdere quotes tegelijk indexeren
+
+Een simulatiescherm maken dat een lijst van quotes met voor- en na-waarden toont
+
+Onderzoeken hoe HANA hierin gebruikt kan worden
+
+Item indexatie ondersteunen
+
+Ideeën voor een latere uitbreiding
+
+Naast de directe feedback kwamen er ook al enkele ideeën naar boven voor uitbreidingen die we later eventueel nog kunnen bespreken:
+
+Een workflow waarbij een nieuwe quote revision eerst in een status "Pending Indexation" terechtkomt
+
+Een approval flow in CPQ waarbij een manager het contract moet goedkeuren
+
+Bij approve gaat de revision verder naar Preparing
+
+Bij reject moet de gebruiker terug naar de vorige revision
+
+Pricing uitbreiden, bijvoorbeeld door marge voor en na indexatie te berekenen
+
+Reflectie
+
+Week 7 draaide minder rond puur bouwen en meer rond verfijnen, evalueren en vooruitdenken. De applicatie werkte al, maar door de feedback van mijn mentoren werd duidelijk welke verbeteringen nodig zijn om er een sterkere en professionelere oplossing van te maken.
+
+De tussentijdse evaluatie was ook een belangrijk moment. Het was goed om te horen dat het technische luik sterk zat, maar tegelijk ook nuttig om mee te nemen dat ik nog kan groeien in communicatie.
+
+De volgende stap is nu om deze opmerkingen systematisch te verwerken in de applicatie en het project verder af te werken richting een nog sterkere demo en eindresultaat.`
+  },
+  {
+    slug: "week-6-integratie-van-cap-en-fiori",
+    title: "Week 6: Integratie van CAP en Fiori",
+    date: "2026-03-14",
+    excerpt:
+      "Week 6 draaide om de opbouw van de CAP-backend, de Fiori-frontend en de volledige end-to-end integratie met SAP CPQ.",
+    intro:
+      "De verschillende onderdelen van het project kwamen samen in een werkende applicatie: CPQ, API's, CAP, Fiori elements en de indexatieflow op SAP BTP.",
+    readingMinutes: 9,
+    tags: ["cap", "fiori", "integratie"],
+    content: `Week 6 – Integratie van CAP en Fiori
+
+Week 6 stond volledig in het teken van de ontwikkeling van de applicatie zelf. Waar week 5 vooral draaide rond het bouwen en testen van het custom CPQ API script, ging de focus deze week naar het bouwen van de backend met SAP CAP en de frontend met SAP Fiori elements. In deze fase begon alles samen te komen: de CPQ configuratie, de API's en de applicatie op SAP BTP.
+
+Ontwikkelen van de CAP backend
+
+Ik ben deze week gestart met het opzetten van de backend service met SAP CAP (Cloud Application Programming Model). Deze service vormt de centrale laag tussen de gebruikersinterface en SAP CPQ.
+
+In mijn architectuur draait deze service op SAP BTP in een Cloud Foundry omgeving en stelt ze een OData service ter beschikking voor de Fiori applicatie.
+
+De belangrijkste reden om CAP te gebruiken is dat de frontend niet rechtstreeks met CPQ communiceert. Alle logica wordt centraal verwerkt in de backend. Hierdoor kunnen we onder andere:
+
+Authenticatie correct afhandelen
+
+API calls naar CPQ centraliseren
+
+Fouten beter controleren
+
+Gevoelige informatie zoals credentials veilig houden
+
+Voor de connectie met CPQ heb ik gebruik gemaakt van de SAP Destination service, zodat de OAuth2 client credentials niet in de code staan maar centraal beheerd worden in BTP.
+
+Binnen mijn CAP service heb ik verschillende functies geimplementeerd die de CPQ API's aanspreken, waaronder:
+
+Ophalen van de lijst met quotes
+
+Ophalen van de details van een specifieke quote
+
+Ophalen van alle items van een quote
+
+Deze data wordt vervolgens omgezet naar OData entities zodat de Fiori applicatie ze eenvoudig kan gebruiken.
+
+OData service en applicatielogica
+
+In de CAP service heb ik een OData service opgebouwd met onder andere de volgende onderdelen:
+
+Entities
+
+Quotes
+
+QuoteItems
+
+Custom action
+
+ApplyIndexation
+
+Deze action is het belangrijkste onderdeel van de applicatie. Wanneer de gebruiker een indexatiepercentage bevestigt in de interface, wordt deze action aangeroepen.
+
+De flow verloopt als volgt:
+
+De gebruiker kiest een quote in de interface
+
+De gebruiker geeft een indexatiepercentage in
+
+De Fiori applicatie roept de ApplyIndexation action aan
+
+De CAP service stuurt een request naar het CPQ custom API script
+
+CPQ maakt een nieuwe revision, past de indexatie toe en herberekent de quote
+
+De nieuwe totals worden teruggestuurd naar de applicatie
+
+Dit sluit perfect aan bij de use case die in mijn blueprint beschreven staat: een quote selecteren, een percentage ingeven en automatisch een nieuwe revision laten aanmaken met herberekende prijzen.
+
+Ontwikkelen van de Fiori applicatie
+
+Naast de backend heb ik ook de gebruikersinterface gebouwd met SAP Fiori elements in SAP Business Application Studio.
+
+In plaats van een volledige UI van nul te bouwen, maakt Fiori elements gebruik van templates op basis van OData services. Hierdoor kan je snel een consistente interface genereren.
+
+De applicatie bestaat uit drie hoofdschermen die overeenkomen met mijn functioneel design:
+
+1. Quotes overzicht (List Report)
+Hier worden alle quotes en contracten opgelijst. De gebruiker kan een document selecteren om de details te bekijken.
+
+2. Quote detailpagina (Object Page)
+Op deze pagina worden de details van de quote en alle line items getoond.
+
+3. Indexatie dialoog
+Via een actieknop kan de gebruiker een indexatiepercentage ingeven en bevestigen.
+
+Dit komt rechtstreeks overeen met de drie schermen die in mijn blueprint beschreven zijn voor de indexatieflow.
+
+In de interface heb ik onder andere volgende functionaliteiten toegevoegd:
+
+Tabel met quote-items
+
+Actie "Indexatie toepassen"
+
+Dialoogvenster voor het percentage
+
+Validatie van het ingevoerde percentage
+
+Previewberekening van nieuwe totalen
+
+Foutmeldingen bij API fouten
+
+Hierdoor kan de gebruiker op een eenvoudige manier een indexatie uitvoeren zonder manueel elk item aan te passen.
+
+End-to-end integratie
+
+Na het bouwen van zowel de backend als de frontend kon ik de volledige flow testen.
+
+De volledige end-to-end flow ziet er nu als volgt uit:
+
+De gebruiker opent de Fiori applicatie
+
+De applicatie haalt de lijst met quotes op via CAP
+
+CAP roept de CPQ API /api/v1/quotes aan
+
+De gebruiker opent een quote
+
+CAP haalt de details en items op via /api/v1/quotes/{quoteId} en /items
+
+De gebruiker geeft een indexatiepercentage in
+
+CAP roept het CPQ custom API script aan
+
+CPQ maakt een nieuwe revision en herberekent de quote
+
+De nieuwe waarden worden teruggestuurd naar de applicatie
+
+Deze integratie toont dat de applicatie correct kan communiceren met SAP CPQ en dat het volledige proces geautomatiseerd kan worden.
+
+Project sneller afgerond dan gepland
+
+Wat deze week ook duidelijk werd, is dat het project sneller vooruit ging dan verwacht.
+
+Volgens de planning in mijn blueprint was er ongeveer acht weken voorzien voor de volledige realisatie van de proof of concept. Door goed door te werken en omdat ik de architectuur vooraf grondig had uitgewerkt, was de applicatie na ongeveer twee weken ontwikkeling al volledig werkend.
+
+De belangrijkste onderdelen waren op dat moment al gerealiseerd:
+
+CPQ configuratie (custom field, calculation en script)
+
+API integratie
+
+CAP backend
+
+Fiori frontend
+
+End-to-end indexatie flow
+
+Het enige wat nog moest gebeuren was het deployen van de applicatie op SAP BTP en het voorbereiden van de demo.
+
+Reflectie
+
+Week 6 was waarschijnlijk de meest productieve week van mijn stage tot nu toe. Alles waar ik de vorige weken aan gewerkt had - de blueprint, de architectuur en het CPQ script - kwam nu samen in een werkende applicatie.
+
+Het was ook motiverend om te zien dat het project sneller werkte dan gepland. Doordat ik vooraf veel tijd had gestoken in het begrijpen van de technologieen en het uitwerken van de architectuur, kon de implementatie relatief vlot verlopen.
+
+Na deze week was de applicatie technisch gezien al volledig klaar. De volgende stap is het correct deployen van de applicatie op SAP BTP en het voorbereiden van de finale demonstratie van het project.`
+  },
+  {
     slug: "week-5-start-van-de-ontwikkeling",
     title: "Week 5: Start van de ontwikkeling",
     date: "2026-03-07",
