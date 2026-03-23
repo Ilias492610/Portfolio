@@ -12,6 +12,7 @@ Next.js portfolio/blog voor WPL-stage, klaar om later op Vercel te deployen.
 - Next.js (App Router)
 - TypeScript
 - CSS (custom design system)
+- Vercel deployment
 
 ## Starten
 ```bash
