@@ -11,6 +11,150 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-10-ui-verfijning-gebruiksvriendelijkheid-en-technische-opsplitsing",
+    title: "Week 10: UI-verfijning, gebruiksvriendelijkheid en technische opsplitsing",
+    date: "2026-04-09",
+    excerpt:
+      "Week 10 draaide rond verfijning: duidelijkere previews, nettere tabellen, beter leesbare code en een eerste denkoefening rond HANA Cloud.",
+    intro:
+      "Na de belangrijkste functionele uitbreidingen verschoof de focus naar kwaliteit: de applicatie moest niet alleen werken, maar ook duidelijker, gebruiksvriendelijker en onderhoudbaarder worden.",
+    readingMinutes: 8,
+    tags: ["ui", "refactor", "hana"],
+    content: `Week 10 – UI-verfijning, gebruiksvriendelijkheid en technische opsplitsing
+
+Week 10 stond vooral in het teken van verfijning. Nadat de belangrijkste flows technisch werkten, lag de focus nu op het verbeteren van de gebruikerservaring, het duidelijker presenteren van gegevens en het structureel opsplitsen van de code zodat de applicatie onderhoudbaarder wordt.
+
+Preview en numerieke weergave verfijnen
+
+Een van de belangrijkste aanpassingen deze week was het herwerken van de previewdialogen. Ik heb ervoor gezorgd dat numerieke waarden niet langer met te veel decimalen werden getoond, maar consequent op twee decimalen werden weergegeven. Daardoor oogde de preview veel netter en professioneler.
+
+Daarnaast heb ik de opmaak van de preview ook visueel verbeterd door ze meer card-achtig op te bouwen, met links de basisinformatie en rechts de totalen. Ook de numerieke kolommen in de tabellen werden beter uitgelijnd, zodat bedragen en percentages sneller leesbaar zijn.
+
+Duidelijkere informatie voor de gebruiker
+
+Verder heb ik ook ingespeeld op feedback rond de duidelijkheid van de getoonde prijzen. Om verwarring tussen net price en extended price te vermijden, heb ik de net price uit de preview verwijderd en enkel nog de extended price behouden. Dat maakte het scherm consistenter en eenvoudiger voor de gebruiker.
+
+Ook de owner ID werd vervangen door de echte owner name door een extra user API aan te roepen. Daardoor sluit de informatie in de applicatie beter aan op wat een eindgebruiker verwacht te zien.
+
+Verbeteringen in de lijstweergave
+
+Op vlak van de lijstweergave heb ik de tabel aangepast naar een GridTable. Daardoor blijven kolommen beter naast elkaar zichtbaar en verspringt de structuur minder snel. Dat is vooral belangrijk om bedragen zoals total amount ook op kleinere schermen bruikbaar en leesbaar te houden.
+
+Samen met aangepaste kolombreedtes zorgde dat voor een veel nettere en stabielere weergave van de gegevens.
+
+Technische opsplitsing van de code
+
+Naast de UI-aanpassingen heb ik deze week ook gewerkt aan de technische structuur van de applicatie. De grote indexation-service.js werd opgesplitst in meerdere kleinere bestanden, telkens met een duidelijke verantwoordelijkheid.
+
+Daardoor werd de code veel leesbaarder en onderhoudsvriendelijker. Dit was een belangrijke stap, omdat de applicatie intussen groot genoeg was geworden om niet alles langer in een enkel bestand te houden.
+
+Vooruitkijken naar performantie
+
+Tot slot heb ik ook al vooruitgekeken naar performantie en schaalbaarheid. Daarbij heb ik onderzocht hoe data later eventueel gerepliceerd kan worden naar HANA Cloud via een job scheduler, zodat filters sneller kunnen werken en niet telkens rechtstreeks alles uit CPQ moet worden opgehaald.
+
+Dat was nog geen afgewerkte functionaliteit, maar wel een belangrijke denkoefening richting een volgende fase van het project.
+
+Reflectie
+
+Week 10 draaide dus minder om nieuwe kernfunctionaliteit en meer om kwaliteit. De applicatie werd duidelijker, mooier en technisch properder opgebouwd.
+
+Dat maakte het project niet alleen beter voor de demo, maar ook sterker als basis om later verder op uit te bouwen.`
+  },
+  {
+    slug: "week-9-ondersteuning-voor-meerdere-quotes-en-indexatie-op-itemniveau",
+    title: "Week 9: Ondersteuning voor meerdere quotes en indexatie op itemniveau",
+    date: "2026-04-04",
+    excerpt:
+      "Week 9 bracht de applicatie dichter bij echte businessnoden met ondersteuning voor meerdere quotes tegelijk en indexatie op individuele producten.",
+    intro:
+      "De flow evolueerde van een eenvoudige indexatie op quote-niveau naar een veel flexibelere oplossing met bulkacties en fijnmazigere controle.",
+    readingMinutes: 8,
+    tags: ["indexatie", "uitbreiding", "cpq"],
+    content: `Week 9 – Ondersteuning voor meerdere quotes en indexatie op itemniveau
+
+Week 9 draaide vooral rond het functioneel uitbreiden van de indexatieflow. Waar de applicatie eerst vooral gericht was op het indexeren van een volledige quote, heb ik deze week gewerkt aan scenario's die veel dichter aanleunen bij echte businessnoden: meerdere quotes tegelijk indexeren en indexatie op individuele producten ondersteunen.
+
+Ondersteuning voor meerdere quotes
+
+Een eerste grote stap was het toevoegen van ondersteuning voor meerdere quotes. Daarmee werd de applicatie meteen veel sterker, omdat de gebruiker niet langer beperkt is tot een document per keer.
+
+Dit sloot ook goed aan bij de feedback van mijn mentoren, die hadden aangegeven dat bulkacties een belangrijke meerwaarde zouden zijn binnen deze use case. De applicatie begon hierdoor meer op een echte werktool te lijken in plaats van enkel een technische demo.
+
+Indexatie op individuele producten
+
+Daarnaast heb ik ook gewerkt aan indexatie op individuele producten. Dat was technisch een stuk complexer, omdat de logica nu niet alleen op quote-niveau correct moest werken, maar ook rekening moest houden met specifieke geselecteerde items.
+
+Tijdens dit deel van de ontwikkeling ben ik op verschillende fouten gebotst in de CPQ custom API flow, zoals problemen met geselecteerde items en foutieve requests. Door die stap voor stap te analyseren en aan te passen, heb ik de flow uiteindelijk werkend gekregen.
+
+Dat was een belangrijk moment, omdat hiermee een veel fijnmazigere vorm van indexatie mogelijk werd.
+
+Meer aandacht voor duidelijkheid in de preview
+
+In dezelfde periode kreeg ik opnieuw feedback over hoe de applicatie verder verbeterd kon worden. Niet alleen de functionaliteit, maar ook de duidelijkheid voor de gebruiker werd belangrijker.
+
+Er moest beter nagedacht worden over wat de gebruiker precies ziet tijdens de preview en welke cijfers relevant zijn. Dat zorgde ervoor dat ik niet enkel bezig was met de vraag of iets technisch werkt, maar ook met de vraag of het duidelijk en bruikbaar is in de praktijk.
+
+Reflectie
+
+Deze week was voor mij technisch een van de belangrijkere weken van het project. De complexiteit nam duidelijk toe, omdat ik niet langer alleen een eenvoudige flow ondersteunde, maar ook meerdere varianten van indexatie.
+
+Tegelijk gaf dat ook meer vertrouwen, omdat de applicatie nu echt begon te tonen dat ze flexibel genoeg is om verder uit te bouwen.
+
+De volgende stap was om die uitgebreidere functionaliteiten visueel en structureel verder af te werken, zodat de applicatie niet alleen meer kon, maar ook duidelijker en professioneler aanvoelde voor de eindgebruiker.`
+  },
+  {
+    slug: "week-8-verdere-uitbouw-van-de-services-en-verfijning-van-de-applicatie",
+    title: "Week 8: Verdere uitbouw van de services en verfijning van de applicatie",
+    date: "2026-03-28",
+    excerpt:
+      "Week 8 draaide rond het uitbreiden van backendservices, het verfijnen van het CDS-model en het functioneel sterker maken van de read flow.",
+    intro:
+      "De basisflow werkte al, maar deze week verschoof de focus naar rijkere data, betere filters en een applicatie die inhoudelijk beter aansluit bij de eindgebruiker.",
+    readingMinutes: 7,
+    tags: ["services", "cds", "verfijning"],
+    content: `Week 8 – Verdere uitbouw van de services en verfijning van de applicatie
+
+Week 8 stond vooral in het teken van het verder uitbouwen van de backendservices en het verfijnen van de gegevens die in de applicatie getoond worden. Waar de vorige fase vooral draaide rond het werkend krijgen van de basisflow, lag de focus deze week op het sterker maken van de read flow en het uitbreiden van de functionele dekking van de applicatie.
+
+Verder bouwen aan de services
+
+Ik heb deze week verder gewerkt aan de quotes service en aanpassingen gedaan aan de indexation service en het CDS-model. Daarmee werd de applicatie beter afgestemd op de manier waarop de data uit CPQ opgehaald en verwerkt moet worden.
+
+Tegelijk heb ik ook extra velden toegevoegd en ben ik begonnen met het verder aanpassen van de applicatie zodat die beter aansluit bij de feedback van mijn mentoren.
+
+De quote list inhoudelijk sterker maken
+
+Een belangrijk deel van deze week bestond uit het verwerken van de opmerkingen uit het overleg. De quote list moest functioneel rijker worden, zodat een gebruiker sneller de juiste quote kan terugvinden en beter begrijpt met welke gegevens hij werkt.
+
+Daarom lag de nadruk op het uitbreiden van de lijst met extra informatie zoals:
+
+Quote owner
+
+Sold-to
+
+Status
+
+Revision number
+
+Naam van de quote
+
+Consistentie en gebruiksvriendelijkheid
+
+Daarnaast moest de applicatie ook consistenter en professioneler worden, onder andere door alles in het Engels te zetten en de filters verder te verfijnen.
+
+Ik heb ook nagedacht over hoe de retrievallogica beter kon aansluiten bij de businesscontext van de gebruiker. Daarbij kwamen extra velden zoals quote description, sold-to en sold-to description naar voren als belangrijke uitbreidingen.
+
+Op die manier werd duidelijk dat de applicatie niet alleen technisch moest werken, maar ook functioneel bruikbaar moest zijn in een realistische werksituatie.
+
+Reflectie
+
+Deze week voelde als een overgang van een puur technische proof of concept naar een oplossing die ook inhoudelijk sterker begint te worden. Door de services en het datamodel verder uit te werken, werd de basis van de applicatie robuuster.
+
+Tegelijk zorgde de feedback van mijn mentoren ervoor dat ik meer begon na te denken vanuit de eindgebruiker en niet alleen vanuit de technische implementatie.
+
+De volgende stap was om die uitgebreidere basis verder om te zetten naar concrete functionaliteiten in de UI en om de indexatieflow verder uit te breiden richting meerdere quotes en meer gedetailleerde indexatie.`
+  },
+  {
     slug: "week-7-uitbreiding-feedback-en-deployment",
     title: "Week 7: Uitbreiding, Feedback en Deployment",
     date: "2026-03-21",
