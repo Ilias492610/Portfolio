@@ -11,6 +11,128 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-12-stabiliseren-van-preview-confirm-en-indexatieflows",
+    title: "Week 12: Stabiliseren van preview-, confirm- en indexatieflows",
+    date: "2026-04-18",
+    excerpt:
+      "Week 12 draaide rond debugging en stabilisatie van de belangrijkste end-to-end flows: preview, confirm, selected items, bulkacties en redirects.",
+    intro:
+      "De basisfunctionaliteit was aanwezig, maar deze week lag de nadruk op betrouwbaarheid: frontend, backend, replicatie en CPQ moesten correct op elkaar aansluiten.",
+    readingMinutes: 9,
+    tags: ["debugging", "stabilisatie", "cpq"],
+    content: `Week 12 – Stabiliseren van preview-, confirm- en indexatieflows
+
+In week 12 lag de nadruk vooral op het volledig stabiel maken van de belangrijkste gebruikersflows in de applicatie. Hoewel de basisfunctionaliteit al aanwezig was, kwamen er tijdens het testen nog verschillende problemen naar boven in de preview-, confirm- en redirectlogica.
+
+Deze week stond daarom volledig in het teken van het oplossen van die integratieproblemen, zodat de applicatie ook end-to-end betrouwbaar werkt.
+
+Preview- en confirmflows opnieuw op elkaar afstemmen
+
+Een van de grootste uitdagingen deze week was dat de verschillende indexatie-acties technisch niet altijd correct op dezelfde manier waren aangesloten. Daardoor traden fouten op bij het previewen of bevestigen van indexaties, zeker bij geselecteerde items en bulkacties.
+
+Ik heb deze flows daarom opnieuw uitgewerkt zodat de bound actions en service-acties correct werden aangesproken vanuit de UI. Daardoor werden previews opnieuw betrouwbaar aangemaakt en konden confirm-acties correct verdergaan naar de CPQ-scriptuitvoering.
+
+Bulk preview correct exposen in de service
+
+Ook de bulkflow gaf nog problemen, omdat de actie niet volledig correct in de CDS-service was blootgesteld. Daardoor ontstonden fouten waarbij de bulkpreview niet als geldige operatie werd herkend.
+
+Door deze actie correct te definiëren in de service en ze opnieuw te koppelen aan de frontend, werkt de bulkindexatie nu opnieuw zoals bedoeld. De gebruiker kan meerdere quotes selecteren, een preview opvragen en de indexatie bevestigen zonder dat de flow vastloopt.
+
+Selected items indexation stabiliseren
+
+Ook de selected-items-flow vergde deze week extra aandacht. Daar zaten problemen in zowel de frontend als de backend: de verkeerde context werd soms gebruikt, previews werden niet altijd correct geladen en de flow gebruikte niet altijd de juiste CPQ-scriptlogica.
+
+Ik heb deze flow daarom opgesplitst en gestabiliseerd, zodat geselecteerde items nu via de juiste context, de juiste preview en de juiste confirmlogica verwerkt worden. Daarnaast werd de Fiori-handlerlogica opgeschoond zodat er nog maar een duidelijke action flow overbleef voor deze functionaliteit.
+
+CPQ-resultaten compacter opslaan
+
+Tijdens het bevestigen van previews bleek ook dat de response die uit CPQ terugkwam soms te groot was om rechtstreeks in de databank op te slaan. Dat veroorzaakte fouten bij het wegschrijven van het confirmresultaat.
+
+Om dat op te lossen heb ik de opgeslagen CPQ-resultaten compacter gemaakt. In plaats van de volledige response ongewijzigd te bewaren, worden nu enkel de relevante velden bewaard. Daardoor blijft de logging nuttig, maar veroorzaakt ze geen databaseproblemen meer.
+
+Nieuwe quotes onmiddellijk zichtbaar maken in de app
+
+Een ander belangrijk probleem was dat nieuw aangemaakte revisions in CPQ niet meteen zichtbaar waren in de applicatie. De indexatie zelf werkte dan wel, maar na bevestiging kon de redirect falen omdat de nieuwe quote nog niet in de replicatielaag aanwezig was.
+
+Om dat op te lossen heb ik de flow aangepast zodat nieuw aangemaakte quotes onmiddellijk na een succesvolle confirm opnieuw worden opgehaald en ververst in de replicatie. Daardoor kan de applicatie meteen doorsturen naar de nieuwe revision en voelt de volledige flow veel consistenter aan voor de gebruiker.
+
+Replicatielogica en actieve revisions verfijnen
+
+Daarnaast heb ik deze week ook verder gewerkt aan de logica rond actieve revisions. Bij het repliceren van quotes was het belangrijk om niet zomaar alle revisies als gelijkwaardig te behandelen, maar expliciet te bepalen welke revision de laatste actieve versie is.
+
+Door die logica te verfijnen worden nieuwe revisions nu beter als actieve quote aangeduid, terwijl oudere revisies correct op inactief gezet worden. Dat zorgt ervoor dat de lijst in de applicatie beter overeenkomt met wat effectief de meest recente toestand is in CPQ.
+
+Redirect- en navigatieflow verbeteren
+
+Ten slotte heb ik ook de navigatie na confirm aangepast. Wanneer een nieuwe revision correct is aangemaakt en gerepliceerd, moet de gebruiker daar ook zonder fouten naartoe geleid worden. Die redirectflow werkte aanvankelijk niet altijd goed doordat de data nog niet onmiddellijk beschikbaar was of doordat de verkeerde context werd gebruikt.
+
+Door de combinatie van directe refreshlogica en opgeschoonde frontend-handlers werkt deze navigatie nu veel stabieler. Dat maakte een groot verschil in hoe afgewerkt de applicatie uiteindelijk aanvoelt.
+
+Extra herstel van CPQ history logging
+
+Naast de preview- en confirmflows heb ik deze week ook opnieuw gezorgd dat de indexatiehistoriek in CPQ correct wordt bijgehouden. Na verschillende technische aanpassingen werkte die logging tijdelijk niet meer zoals voordien.
+
+Door de CPQ-scriptlogica opnieuw te corrigeren, worden indexaties nu opnieuw correct gelogd in de quote table QT_INDEXATION_HISTORY. Daardoor blijft ook de historiek van uitgevoerde indexaties zichtbaar, wat belangrijk is voor opvolging en transparantie.
+
+Reflectie
+
+Week 12 was een week van veel debugging en verfijning, maar ook van grote vooruitgang. De meeste problemen zaten deze keer niet in een losse feature, maar in de samenhang tussen frontend, backend, replicatie en CPQ. Dat maakte het oplossen ervan complexer en tijdsintensiever.
+
+Net daardoor was deze week ook erg leerrijk. Ik heb beter inzicht gekregen in hoe belangrijk het is dat acties, service-definities, database-opslag en externe scriptcalls volledig op elkaar afgestemd zijn.
+
+Door deze problemen stap voor stap weg te werken, is de applicatie nu veel stabieler geworden en werkt de volledige end-to-end flow een stuk betrouwbaarder.`
+  },
+  {
+    slug: "week-11-replicatie-hana-deployment-en-performantieverbeteringen",
+    title: "Week 11: Replicatie, HANA-deployment en performantieverbeteringen",
+    date: "2026-04-11",
+    excerpt:
+      "Week 11 verschoof de focus naar de achterkant van de applicatie, met replicatie naar HANA, Job Scheduler-integratie en performantieverbeteringen.",
+    intro:
+      "Na de UI-verfijning van week 10 lag de nadruk nu op schaalbaarheid, stabielere data-ophaling en een robuustere basis voor grotere hoeveelheden quotes.",
+    readingMinutes: 8,
+    tags: ["hana", "replicatie", "performantie"],
+    content: `Week 11 – Replicatie, HANA-deployment en performantieverbeteringen
+
+Na de focus op UI-verfijning en code-opdeling in week 10, verschoof de aandacht in week 11 meer naar de achterkant van de applicatie. De belangrijkste doelstelling was deze week om de performantie en stabiliteit van de data-ophaling te verbeteren, zodat de applicatie ook met grotere hoeveelheden quotes bruikbaar bleef.
+
+Van rechtstreekse CPQ-ophaling naar replicatie
+
+Een belangrijk aandachtspunt in de applicatie was dat de lijst van quotes en bijhorende gegevens in veel gevallen nog rechtstreeks of te afhankelijk van CPQ werd opgebouwd. Dat werkte voor een beperkte dataset, maar werd minder efficiënt zodra er meer data beschikbaar kwam.
+
+Daarom heb ik verder gewerkt aan een replicatie-aanpak waarbij quotegegevens eerst worden overgenomen en lokaal beschikbaar gemaakt in HANA. Op die manier hoeft de applicatie niet telkens alles rechtstreeks uit CPQ op te halen, wat vooral voordelen biedt voor filtering, sortering en algemene performantie.
+
+Job Scheduler integreren voor automatische synchronisatie
+
+Om die replicatie ook praktisch bruikbaar te maken, heb ik de schedulerlogica verder geïntegreerd aan de servicekant van de applicatie. De Job Scheduler werd gebruikt om replicatietaken automatisch uit te voeren, zodat de data in de applicatie periodiek ververst kan worden zonder manuele tussenkomst.
+
+Daarbij werd er een onderscheid gemaakt tussen een full replication en een delta sync. Een full replication laadt een grotere dataset opnieuw in, terwijl de delta sync enkel recente wijzigingen probeert op te halen. Dat maakt de oplossing efficiënter en realistischer voor een latere productieomgeving.
+
+Deployment naar HANA Cloud
+
+Naast de scheduler heb ik deze week ook de toepassing verder richting HANA Cloud gebracht. Waar lokaal ontwikkelen vaak nog met SQLite of tijdelijke data gebeurde, was het belangrijk om de applicatie correct te deployen op de HANA-omgeving zodat de replicatietabellen en services ook in een meer realistische cloudcontext konden draaien.
+
+Die stap was belangrijk omdat de werking van de applicatie sterk afhankelijk werd van persistente data. Door de CAP-app op HANA te deployen, kon ik de volledige flow beter testen zoals die uiteindelijk ook op SAP BTP gebruikt zou worden.
+
+Sortering en filtering van actieve quotes verbeteren
+
+Een andere verbetering deze week was het beter behandelen van actieve quotes in de lijst. Niet elke revision van een quote hoort zichtbaar te zijn voor de eindgebruiker. Daarom heb ik verder gewerkt aan logica om standaard enkel de relevante, actieve revisions te tonen en de sortering daarop af te stemmen.
+
+Hierdoor werd de lijstweergave niet alleen overzichtelijker, maar ook functioneel correcter. De gebruiker ziet daardoor vooral de laatste bruikbare versie van een quote in plaats van een mix van oude en nieuwe revisies.
+
+Delta sync verder optimaliseren
+
+Naast de algemene replicatiestructuur heb ik ook gekeken naar hoe de delta sync efficiënter kon werken. Daarbij lag de focus op het beperken van onnodige verwerking en het slimmer omgaan met recente wijzigingen.
+
+Dat was belangrijk omdat de applicatie anders te veel data opnieuw zou verwerken terwijl slechts een beperkt deel effectief gewijzigd was. Deze optimalisatie maakte de oplossing schaalbaarder en zorgde ervoor dat de synchronisatie sneller en doelgerichter kon verlopen.
+
+Reflectie
+
+Week 11 stond vooral in het teken van infrastructuur en performantie. Waar de vorige weken vooral draaiden rond functionaliteit en gebruikerservaring, ging het nu meer over hoe de applicatie technisch robuust kan blijven wanneer er meer data en meer complexiteit bijkomt.
+
+Door de replicatie naar HANA, de integratie van de Job Scheduler en de verdere optimalisatie van de synchronisatie is de applicatie deze week een stuk volwassener geworden. Dat maakt ze niet alleen sneller en stabieler, maar ook beter voorbereid op verdere uitbreiding.`
+  },
+  {
     slug: "week-10-ui-verfijning-gebruiksvriendelijkheid-en-technische-opsplitsing",
     title: "Week 10: UI-verfijning, gebruiksvriendelijkheid en technische opsplitsing",
     date: "2026-04-09",
