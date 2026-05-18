@@ -11,6 +11,216 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "week-15-bedrijfsbezoek-bij-pgb-en-verdere-technische-rsa-sessies",
+    title: "Week 15: Bedrijfsbezoek bij PGB en verdere technische RSA-sessies",
+    date: "2026-05-09",
+    excerpt:
+      "Week 15 stond vooral in het teken van de Rising Star Academy, met een bedrijfsbezoek bij PGB en sessies rond SAP Integration, Fiori Elements, RAP, BTP en CAP.",
+    intro:
+      "Deze week werkte ik minder aan nieuwe projectfunctionaliteiten en lag de focus vooral op bredere SAP-kennis, consultancycontext en technische verdieping.",
+    readingMinutes: 9,
+    tags: ["rsa", "sap", "consultancy"],
+    content: `Week 15 – Bedrijfsbezoek bij PGB en verdere technische RSA-sessies
+
+Week 15 stond vooral in het teken van de Rising Star Academy. Deze week heb ik minder aan nieuwe functionaliteiten binnen mijn stageproject gewerkt, maar vooral veel bijgeleerd via technische sessies, oefeningen en een bedrijfsbezoek. De focus lag op het breder begrijpen van SAP-processen, technische ontwikkelmodellen en hoe consultancyprojecten in de praktijk worden aangepakt.
+
+Bedrijfsbezoek bij PGB
+
+Een belangrijk onderdeel van deze week was het bedrijfsbezoek bij PGB, gegeven door Bruno Naessens. Dit bezoek gaf mij de kans om SAP niet alleen vanuit de technische kant te bekijken, maar ook vanuit een echte bedrijfscontext.
+
+Tijdens zo'n bedrijfsbezoek wordt duidelijker waarom SAP-systemen zo belangrijk zijn binnen bedrijven. Processen zoals aankoop, productie, magazijnbeheer, integratie en rapportering zijn geen losse onderdelen, maar hangen sterk samen.
+
+Voor mij was dit interessant omdat ik tijdens mijn stage vooral technisch bezig ben met SAP CPQ, CAP en BTP, terwijl dit bezoek liet zien hoe SAP-oplossingen uiteindelijk gebruikt worden binnen echte bedrijfsprocessen.
+
+Het hielp mij ook om beter te begrijpen wat de rol van een consultant is: niet alleen software bouwen, maar ook begrijpen hoe een bedrijf werkt en hoe technologie een concreet probleem kan oplossen.
+
+SAP Integration
+
+Deze week volgde ik ook een sessie rond SAP Integration, gegeven door Dimitri Sannen. Deze sessie was nuttig omdat integratie een belangrijk onderdeel is van bijna elk SAP-project.
+
+Ik leerde dat SAP-systemen zelden volledig op zichzelf staan. Vaak moeten ze communiceren met andere SAP-systemen, externe applicaties, cloudservices of legacy-systemen. Dat sluit ook aan bij mijn stageproject, waar mijn CAP-backend communiceert met SAP CPQ via REST APIs en BTP Destinations.
+
+De sessie gaf mij meer inzicht in waarom integraties betrouwbaar, veilig en onderhoudbaar moeten zijn. Vooral foutafhandeling, monitoring, authenticatie en duidelijke interfaces zijn belangrijk. Dat zijn ook principes die terugkomen in mijn eigen project, bijvoorbeeld bij de CPQ custom API call en de notificatieflow via SAP Alert Notification.
+
+Fiori Elements
+
+Daarnaast heb ik opnieuw een technische sessie rond Fiori Elements gevolgd, gegeven door Jeroen Roels. Dit sloot goed aan bij mijn eigen stageproject, omdat mijn CPQ Indexation applicatie ook gebouwd is met een Fiori-interface.
+
+Tijdens deze sessie werd verder duidelijk hoe Fiori Elements werkt op basis van OData-services, annotations en metadata. In plaats van elk scherm volledig manueel te bouwen, kan je met Fiori Elements sneller standaard SAP-schermen maken zoals een List Report en Object Page.
+
+Voor mijn eigen project was dit herkenbaar, omdat ik zelf ook werk met een quote list, een detailpagina, acties en previewdialogen. De sessie hielp mij om beter te begrijpen waarom Fiori Elements in SAP-projecten vaak gebruikt wordt: het versnelt ontwikkeling, zorgt voor consistente schermen en past goed binnen de SAP UX-richtlijnen.
+
+RAP en RAP-oefeningen
+
+Een groot deel van deze week ging ook naar RAP, gegeven door Steven De Baerdemaeker. RAP staat voor ABAP RESTful Application Programming Model en wordt gebruikt om moderne SAP-applicaties te bouwen binnen de ABAP-stack.
+
+Tijdens de sessies werd gewerkt rond concepten zoals CDS views, behavior definitions, service definitions en Fiori Elements. Dit was interessant omdat ik hierdoor beter het verschil begon te begrijpen tussen CAP en RAP. CAP gebruik ik in mijn stageproject op SAP BTP met Node.js, terwijl RAP meer gericht is op ABAP-ontwikkeling binnen S/4HANA.
+
+De self-paced RAP-oefeningen waren nuttig omdat ik de theorie ook praktisch kon toepassen. Door zelf te oefenen werd duidelijker hoe een RAP-applicatie stap voor stap wordt opgebouwd: eerst het datamodel, daarna de behavior, vervolgens de service en uiteindelijk de Fiori-preview.
+
+BTP
+
+Ik volgde ook een technische sessie rond SAP BTP, gegeven door Issa Floré. Deze sessie was direct relevant voor mijn stageproject, omdat mijn CPQ Indexation applicatie volledig op SAP BTP draait.
+
+Tijdens deze sessie werd duidelijker welke rol BTP speelt als extensieplatform. BTP wordt gebruikt om applicaties naast bestaande SAP-systemen te bouwen zonder de kernsystemen rechtstreeks aan te passen. Dat is exact het principe van mijn project: de indexatie-applicatie is een side-by-side extensie die SAP CPQ uitbreidt zonder CPQ zelf volledig te veranderen.
+
+De sessie hielp mij om de verschillende BTP-services beter te plaatsen, zoals Cloud Foundry, Destinations, XSUAA, HANA Cloud, HTML5 Application Repository en Job Scheduler. Veel van die services gebruik ik ook effectief in mijn project, waardoor de theorie goed aansloot bij mijn praktijkervaring.
+
+CAP
+
+Tot slot volgde ik ook technische sessies rond CAP, eveneens gegeven door Issa Floré. Dit was waarschijnlijk een van de meest relevante onderdelen van de week voor mijn stage.
+
+CAP, of Cloud Application Programming Model, vormt de backendbasis van mijn CPQ Indexation applicatie. Tijdens de sessies werd opnieuw duidelijk hoe CAP gebruikt wordt om services, datamodellen en businesslogica op een gestructureerde manier op te bouwen.
+
+Voor mijn eigen project gebruik ik CAP voor OData-services, previewberekeningen, confirm-acties, CPQ-integratie, scheduled indexations en notificaties. De CAP-sessies hielpen mij om mijn eigen architectuur beter te begrijpen en ook beter te kunnen uitleggen waarom CAP geschikt is voor dit soort side-by-side extensies.
+
+Reflectie
+
+Week 15 was een leergerichte week waarin ik mijn SAP-kennis verder heb verbreed. Het bedrijfsbezoek bij PGB gaf mij meer inzicht in de bedrijfscontext achter SAP-projecten, terwijl de technische RSA-sessies mij hielpen om mijn kennis rond Fiori Elements, RAP, BTP, CAP en integratie verder te verdiepen.
+
+Vooral de sessies rond BTP en CAP sloten sterk aan bij mijn stageproject. Hierdoor kon ik mijn eigen oplossing beter plaatsen binnen het grotere SAP-landschap. Ook de RAP-sessies waren waardevol, omdat ik daardoor beter begrijp hoe moderne SAP-applicaties zowel in CAP als in ABAP RAP opgebouwd kunnen worden.
+
+Deze week heeft mij vooral geholpen om niet alleen als developer naar mijn project te kijken, maar ook meer als toekomstige SAP-consultant. Ik kreeg een beter beeld van hoe technische keuzes, bedrijfsprocessen en klantbehoeften met elkaar verbonden zijn.`
+  },
+  {
+    slug: "week-14-afronding-alert-notification-technische-einddocumentatie-en-rsa",
+    title: "Week 14: Afronding Alert Notification, technische einddocumentatie en RSA",
+    date: "2026-05-02",
+    excerpt:
+      "Week 14 draaide rond het afwerken van SAP Alert Notification, het uitschrijven van de technische eindblueprint en verdere RSA-sessies.",
+    intro:
+      "De focus verschoof van nieuwe features bouwen naar professioneel afronden, documenteren en de proof of concept technisch verdedigbaar maken.",
+    readingMinutes: 10,
+    tags: ["documentatie", "alert-notification", "rsa"],
+    content: `Week 14 – Afronding Alert Notification, technische einddocumentatie en RSA
+
+Week 14 stond vooral in het teken van afronding en documentatie. Nadat ik in week 13 de basis had gelegd voor scheduled indexation en notificaties via SAP Alert Notification, heb ik deze week de Alert Notification flow verder afgewerkt en daarnaast gewerkt aan de technische eindblueprint van de CPQ Indexation applicatie.
+
+De focus verschoof hierdoor van nieuwe functionaliteiten bouwen naar het professioneel afronden en uitleggen van de gerealiseerde proof of concept. Dat was belangrijk, omdat de applicatie ondertussen uit meerdere technische onderdelen bestond: een Fiori frontend, een CAP backend, HANA-replicatie, CPQ-integratie, Job Scheduler en Alert Notification.
+
+Alert Notification afwerken
+
+Een belangrijk onderdeel van deze week was het verder afwerken van SAP Alert Notification. In plaats van rechtstreeks e-mails te versturen via SMTP, gebruikt de applicatie nu SAP Alert Notification om events om te zetten naar e-mailmeldingen.
+
+Wanneer een indexatie wordt uitgevoerd, publiceert de CAP backend een event zoals CPQ_INDEXATION_EXECUTED naar de Alert Notification service. In BTP wordt daarna via een condition gecontroleerd of het eventtype overeenkomt met de CPQ indexation events. Als dat zo is, wordt er automatisch een e-mailactie uitgevoerd naar de ingestelde mailbox.
+
+Deze aanpak is veel beter geschikt voor de POC dan directe SMTP-verzending. Eerder had ik onderzocht dat Microsoft 365 SMTP extra IT-configuratie zou vereisen, zoals SMTP AUTH voor een service mailbox, een relay service of Microsoft Graph met OAuth. Voor deze proof of concept was SAP Alert Notification daarom een veiligere en meer SAP-native oplossing.
+
+Ik heb ook rekening gehouden met het feit dat notificaties de hoofdflow niet mogen blokkeren. Als een e-mailmelding faalt, mag dat niet betekenen dat de CPQ revision zelf mislukt. De indexatie en revision creation blijven dus de belangrijkste actie; de notificatie is een extra opvolgingslaag.
+
+Werken aan de technische eindblueprint
+
+Naast de technische afwerking heb ik deze week vooral gewerkt aan de technische eindblueprint. Daarin heb ik de gerealiseerde oplossing beschreven als een side-by-side extensie op SAP BTP. Het doel was om duidelijk te maken hoe de applicatie technisch is opgebouwd en hoe de verschillende onderdelen samenwerken.
+
+In de documentatie heb ik onder andere beschreven dat de read-kant van de applicatie via HANA verloopt, terwijl de write-kant gecontroleerd in CPQ blijft. Dat betekent dat quotes, items en partners gerepliceerd worden naar HANA voor performante weergave en filtering, maar dat de echte prijsaanpassing nog altijd via het CPQ custom API script gebeurt.
+
+Op die manier blijft CPQ de bron voor de effectieve quoteaanpassing en revision creation.
+
+Architectuur verduidelijken
+
+Ik heb ook de architectuur verder uitgewerkt. De frontend bestaat uit een SAP Fiori applicatie die gehost wordt via de HTML5 App Repository. De routing en authenticatie lopen via de approuter en XSUAA.
+
+De CAP Node.js backend bevat de businesslogica en communiceert met CPQ via Destinations en de CPQ REST API. Voor persistence wordt HANA Cloud gebruikt, onder andere voor gerepliceerde quotes, previewdata, bulkdata en scheduled indexations.
+
+CAP backend en datamodel verduidelijken
+
+Een groot deel van de technische documentatie ging over de CAP backend. Omdat de applicatie intussen veel verantwoordelijkheden heeft, was het belangrijk om uit te leggen hoe de code logisch is opgesplitst.
+
+Ik heb beschreven welke handlers verantwoordelijk zijn voor welke onderdelen. De read handler leest gerepliceerde data met filtering, paging, sorting en search. De preview handler berekent simulaties zonder CPQ te wijzigen. De confirm handler voert het CPQ script uit, bewaart de status, refresht de nieuwe quote en publiceert een notificatie-event. De schedule handler zorgt ervoor dat geplande indexaties kunnen worden uitgevoerd via RunDueScheduledIndexations.
+
+Ook het datamodel heb ik verduidelijkt. De applicatie bevat entiteiten voor quotes, quote items en partners, maar ook voor previews, preview items, bulk previews, scheduled indexations en replication state. Door dat goed te documenteren wordt duidelijker waarom de applicatie niet alleen een eenvoudige UI bovenop CPQ is, maar een volwaardige BTP-extensie met eigen persistente logica.
+
+CPQ-integratie documenteren
+
+In de eindblueprint heb ik ook de CPQ-integratie duidelijker beschreven. CAP gebruikt de CPQ_DEST destination om CPQ REST APIs aan te roepen. Voor het lezen van gegevens worden standaard endpoints gebruikt, zoals quote list, quote detail, items en involved parties.
+
+Voor de echte indexatie wordt één gecontroleerd custom API script gebruikt: LPST_Apply_Indexation_API. Dat script valideert de input, maakt een nieuwe revision aan, past de prijzen aan, bewaart het indexatiepercentage en schrijft een auditregel weg in de quote table LPST_Indexation_History.
+
+Deze documentatie was belangrijk omdat dit de kern van de oplossing uitlegt: de applicatie wijzigt CPQ niet rechtstreeks vanuit de frontend, maar laat CPQ zelf de revision en prijsaanpassing uitvoeren via een gecontroleerd script. CAP bewaart daarna de status, refresht de nieuwe quote en publiceert eventueel een notificatie.
+
+Rising Star Academy
+
+Naast mijn werk aan Alert Notification en de technische eindblueprint heb ik in week 14 ook deelgenomen aan enkele sessies van de Rising Star Academy. Deze sessies waren interessant omdat ze mij hielpen om mijn technische stageproject beter te plaatsen binnen bredere SAP- en consultancycontext.
+
+Een van de sessies die ik volgde ging over Fiori Elements, gegeven door Jeroen Roels. Dit sloot goed aan bij mijn eigen project, omdat mijn CPQ Indexation applicatie ook gebruikmaakt van een Fiori-app met list report, object page en acties.
+
+Daarnaast heb ik lessen gevolgd van Rowan rond wat er verwacht wordt van een consultant en rond project management. Deze sessies waren minder technisch, maar wel belangrijk voor mijn persoonlijke ontwikkeling. Ze gaven mij meer inzicht in hoe je als consultant communiceert met klanten, hoe je verwachtingen beheert en hoe je structuur brengt in een project.
+
+Op dinsdag en woensdag heb ik ook meegedaan met de RAP-sessies van Steven De Baerdemaeker. RAP staat voor ABAP RESTful Application Programming Model en wordt gebruikt om moderne SAP-applicaties en services te bouwen binnen de ABAP-stack.
+
+Tijdens deze lessen kreeg ik meer inzicht in hoe SAP-applicaties worden opgebouwd met CDS views, behavior definitions, service definitions en Fiori Elements. Dit was nuttig omdat ik hierdoor beter het verschil en de gelijkenissen begon te begrijpen tussen mijn CAP-project op BTP en een RAP-applicatie in ABAP.
+
+Reflectie
+
+Week 14 was minder gericht op nieuwe features en meer op het afwerken, structureren en professioneel uitleggen van het project. Dat was een belangrijke stap, omdat een proof of concept niet alleen moet werken, maar ook begrijpbaar en overdraagbaar moet zijn.
+
+Door Alert Notification af te werken, werd de applicatie sterker op vlak van opvolging en monitoring. Door de technische eindblueprint uit te schrijven, kreeg ik zelf ook een beter totaalbeeld van mijn oplossing. Ik moest duidelijk nadenken over waarom bepaalde keuzes gemaakt zijn, zoals HANA-replicatie voor performante reads, CPQ als write-kant voor revision creation, en SAP Alert Notification in plaats van directe SMTP.
+
+Deze week heeft het project meer maturiteit gekregen. De applicatie is niet langer enkel een technische demo waarin een indexatie kan worden uitgevoerd, maar een beter gedocumenteerde BTP-oplossing met aandacht voor architectuur, security, deployment, scheduling, notificaties en demo-aandachtspunten.`
+  },
+  {
+    slug: "week-13-automatisatie-notificaties-en-eerste-rsa-lessen",
+    title: "Week 13: Automatisatie, notificaties en eerste RSA-lessen",
+    date: "2026-04-25",
+    excerpt:
+      "Week 13 draaide rond scheduled indexation met Job Scheduler, notificaties via SAP Alert Notification en de eerste RSA-les rond Customer Experience.",
+    intro:
+      "Naast de manuele indexatieflow onderzocht ik hoe dezelfde logica automatisch of periodiek kan worden uitgevoerd en hoe gebruikers daarna duidelijke meldingen kunnen krijgen.",
+    readingMinutes: 9,
+    tags: ["automation", "notifications", "rsa"],
+    content: `Week 13 – Automatisatie, notificaties en eerste RSA-lessen
+
+Week 13 stond vooral in het teken van automatisatie en operationele afwerking. In de vorige weken lag de focus vooral op het manueel uitvoeren van de indexatieflow via de applicatie: een quote selecteren, een preview bekijken en daarna bevestigen zodat CPQ een nieuwe revision aanmaakt.
+
+Deze week heb ik onderzocht hoe dezelfde logica ook automatisch of periodiek kan worden uitgevoerd, en hoe gebruikers of beheerders daarna een duidelijke melding kunnen krijgen.
+
+Scheduled indexation met Job Scheduler
+
+Een eerste grote uitbreiding deze week was het toevoegen van scheduled indexation via SAP Job Scheduler. Tot nu toe werd de indexatie vooral gestart door een gebruiker in de Fiori-app. Met deze uitbreiding kan de indexatieflow ook via een geplande job worden uitgevoerd.
+
+Hiervoor heb ik een aparte execution flow voorzien in de CAP-service. Die flow kan door de Job Scheduler worden aangeroepen, zodat de applicatie niet alleen interactief werkt, maar ook voorbereid is op automatische verwerking.
+
+Dit is belangrijk voor een realistische businesscase, omdat prijsindexatie vaak niet quote per quote manueel wordt uitgevoerd, maar op vaste momenten of in grotere batches.
+
+Deze uitbreiding sluit ook aan bij het idee dat we eerder besproken hadden rond datareplicatie en performantie. Wanneer quotes en relevante data op termijn in een database zoals HANA Cloud worden gerepliceerd, kan een scheduled job gebruikt worden om data periodiek op te halen, te verwerken of klaar te zetten voor snellere filters en rapportering.
+
+Notificaties na indexatie
+
+Een tweede belangrijke feature was het toevoegen van notificaties via SAP Alert Notification. Het doel hiervan was om na een indexatie automatisch een melding te kunnen versturen, bijvoorbeeld wanneer een indexatie succesvol werd uitgevoerd of wanneer er een probleem optreedt.
+
+Eerst had ik gekeken naar directe e-mails via SMTP, maar daar kwamen praktische en security-gerelateerde aandachtspunten bij kijken. Voor een productieklare oplossing met Microsoft 365 zou er IT-betrokkenheid nodig zijn, bijvoorbeeld voor een service mailbox, SMTP AUTH, een mail relay of Microsoft Graph met OAuth.
+
+Omdat dit voor de proof of concept te zwaar en minder veilig was, heb ik gekozen voor SAP Alert Notification als pragmatische oplossing.
+
+Met SAP Alert Notification kan de CAP-applicatie een event uitsturen wanneer de indexatie is uitgevoerd. Daarna kan Alert Notification op basis van regels bepalen welke actie moet gebeuren, zoals het versturen van een e-mail. Hierdoor blijft de applicatie zelf eenvoudiger en moet ze geen Microsoft 365-wachtwoorden of SMTP-gegevens beheren.
+
+Eerste RSA-les rond CX
+
+Naast mijn werk aan Job Scheduler en SAP Alert Notification heb ik deze week ook mijn eerste RSA-les gevolgd rond CX, gegeven door Jo Reypens, Jan Clemens en Felix Van Cappellen.
+
+Tijdens deze les kreeg ik een eerste overzicht van wat de Customer Experience unit binnen TheValueChain doet. CX draait rond oplossingen die bedrijven helpen om hun klanten beter te begrijpen, commerciële processen te stroomlijnen en verkoop, service en marketing beter met elkaar te verbinden.
+
+In de les kwamen verschillende onderdelen binnen SAP CX aan bod. SAP Sales Cloud ondersteunt verkoopteams bij het beheren van klanten, contacten, activiteiten en opportuniteiten. SAP Service Cloud focust op klantenservice en helpt bedrijven om klantenvragen, tickets en serviceprocessen beter op te volgen.
+
+SAP Commerce Cloud wordt gebruikt voor digitale verkoop en e-commerce, zodat bedrijven online verkoopkanalen kunnen bouwen en beheren. Daarnaast kwam ook SAP CPQ aan bod. CPQ staat voor Configure, Price, Quote en helpt bedrijven om producten te configureren, prijzen correct te berekenen en offertes sneller en consistenter op te maken.
+
+Dit sloot rechtstreeks aan bij mijn stageproject, omdat mijn indexatie-applicatie bovenop SAP CPQ werkt. Tot slot werd ook SAP Customer Data Cloud besproken, dat draait rond het veilig beheren van klantgegevens, identiteit en voorkeuren.
+
+Mijn project binnen het bredere CX-landschap
+
+Deze les hielp mij om mijn eigen stageproject beter te plaatsen binnen het bredere CX-landschap. Ik werkte al technisch met SAP CPQ, maar door deze sessie werd duidelijker hoe CPQ past binnen een groter geheel van sales, service, commerce en klantdata.
+
+Daardoor kreeg ik meer inzicht in waarom mijn applicatie niet zomaar een technische uitbreiding is, maar deel uitmaakt van een bredere customer experience-flow.
+
+Reflectie
+
+Week 13 was voor mij een belangrijke week omdat ik meer heb gewerkt aan de operationele kant van het project. Ik merkte dat een technische proof of concept pas echt overtuigend wordt wanneer je ook nadenkt over automatisatie, logging, notificaties en security.
+
+De keuze om SAP Alert Notification te gebruiken in plaats van directe SMTP-mails was daarbij een goede les. Technisch iets werkend krijgen is niet altijd hetzelfde als een veilige of onderhoudbare oplossing bouwen. Door te kiezen voor een SAP BTP-service bleef de oplossing beter binnen het SAP-landschap en werd ze ook beter verdedigbaar tegenover mijn mentoren.
+
+De combinatie van Job Scheduler en Alert Notification maakt de applicatie professioneler. De indexatieflow is daardoor niet meer enkel een manuele demo, maar begint meer te lijken op een proces dat later echt ingepland en opgevolgd zou kunnen worden binnen een bedrijfsomgeving.`
+  },
+  {
     slug: "week-12-stabiliseren-van-preview-confirm-en-indexatieflows",
     title: "Week 12: Stabiliseren van preview-, confirm- en indexatieflows",
     date: "2026-04-18",
