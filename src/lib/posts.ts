@@ -11,6 +11,64 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "laatste-stageblog-terugblik-op-mijn-stage",
+    title: "Laatste stageblog: terugblik op mijn stage",
+    date: "2026-05-21",
+    excerpt:
+      "Mijn laatste stageblog: een terugblik op het volledige traject, van eerste CPQ-trainingen tot een volwassen BTP proof of concept.",
+    intro:
+      "Nieuwe week, nieuwe blog... maar deze keer voelt het anders. Dit is mijn laatste stageblog en dus ook het moment om terug te kijken op wat ik technisch en persoonlijk heb geleerd.",
+    readingMinutes: 7,
+    tags: ["reflectie", "lessons learned", "wins"],
+    content: `Laatste stageblog: terugblik op mijn stage
+
+Nieuwe week, nieuwe blog... maar deze keer voelt het toch anders. Ondertussen zit mijn stage er bijna op en als ik terugkijk naar de voorbije weken, is er veel meer gebeurd dan ik in het begin had verwacht.
+
+Wat startte met onboarding, CPQ-trainingen en veel nieuwe termen, groeide uiteindelijk uit tot een project waarin ik echt een volledige oplossing heb mogen uitwerken. Van scripting in SAP CPQ tot CAP-services, Fiori-schermen, HANA-replicatie, Job Scheduler en Alert Notification: stap voor stap kwam alles samen.
+
+Van student naar projectverantwoordelijkheid
+
+In het begin voelde alles nog groot en vrij technisch aan. CPQ, BTP, CAP, Fiori, Cloud Foundry, Destinations, XSUAA... het waren allemaal termen die ik wel kon opzoeken, maar nog niet echt in context kon plaatsen.
+
+Doorheen de stage veranderde dat. Elke week werd het project concreter. Eerst begreep ik wat de indexatie-app moest doen, daarna hoe de architectuur in elkaar zat, en uiteindelijk hoe alle onderdelen technisch met elkaar moesten samenwerken.
+
+Wat mij vooral is bijgebleven, is dat een project niet gewoon bestaat uit code schrijven. Je moet nadenken over de gebruiker, over foutafhandeling, over security, over performantie en over hoe iemand anders later jouw oplossing kan begrijpen.
+
+Het project technisch zien groeien
+
+De CPQ Indexation applicatie is tijdens mijn stage sterk gegroeid. In het begin was het doel vrij eenvoudig uit te leggen: een quote selecteren, een indexatiepercentage toepassen en een nieuwe revision laten aanmaken in CPQ.
+
+Maar in de praktijk kwam daar veel meer bij kijken. Er kwamen previews bij, confirmflows, bulkindexatie, itemindexatie, replicatie naar HANA, scheduled indexations en notificaties. Soms werkte iets snel, soms zat ik lang vast op een fout die pas duidelijk werd na veel testen en debuggen.
+
+Die momenten waren niet altijd de leukste, maar achteraf gezien wel de momenten waarop ik het meeste geleerd heb. Vooral de problemen rond preview-, confirm- en redirectflows hebben mij beter doen begrijpen hoe belangrijk het is dat frontend, backend, database en externe API's correct op elkaar afgestemd zijn.
+
+Feedback en communicatie
+
+Ook de feedbackmomenten met mijn mentoren waren belangrijk. Door demo's te geven en mijn aanpak uit te leggen, merkte ik waar mijn technische redenering nog niet duidelijk genoeg was. Soms werkte iets technisch wel, maar moest ik het beter kunnen uitleggen of beter documenteren.
+
+Dat was ook een werkpunt dat tijdens mijn stage naar voren kwam: communicatie. Niet alleen zeggen wat je gebouwd hebt, maar ook waarom je bepaalde keuzes maakt, welke risico's er zijn en wat de volgende stap is.
+
+Daar ben ik doorheen de stage bewuster mee bezig geworden. Zeker bij de technische eindblueprint merkte ik dat documenteren bijna even belangrijk is als bouwen. Een proof of concept is pas echt bruikbaar als iemand anders ook begrijpt hoe het in elkaar zit.
+
+Rising Star Academy
+
+Naast mijn project heb ik ook veel bijgeleerd tijdens de Rising Star Academy. De sessies rond CX, Fiori Elements, RAP, BTP, CAP, Integration en consultancy gaven mij een breder beeld van SAP en TheValueChain.
+
+Vooral de combinatie van technische sessies en consultancygerichte onderwerpen vond ik waardevol. Ik begon beter te begrijpen dat een SAP-consultant niet alleen technologie moet kennen, maar ook bedrijfsprocessen, klantbehoeften en communicatie.
+
+Daardoor kon ik mijn eigen stageproject beter plaatsen. Mijn applicatie was niet zomaar een technische uitbreiding op CPQ, maar een onderdeel van een groter verhaal rond verkoopprocessen, contracten, prijsaanpassingen en customer experience.
+
+Wat ik meeneem
+
+Als ik mijn stage in een woord zou moeten samenvatten, dan kies ik voor groei. Groei in technische kennis, maar ook in zelfstandigheid, communicatie en inzicht in hoe echte projecten verlopen.
+
+Ik heb geleerd dat fouten en blokkades erbij horen. Niet alles werkt van de eerste keer, en dat hoeft ook niet. Belangrijker is dat je blijft analyseren, vragen stelt wanneer dat nodig is en stap voor stap naar een betere oplossing werkt.
+
+Ik kijk met een positief gevoel terug op deze stage. Ik heb veel nieuwe technologieën leren kennen, aan een echte businesscase gewerkt en beter begrepen hoe SAP-projecten in de praktijk opgebouwd worden.
+
+En daarmee sluit ik mijn stageblog af. Nieuwe week, nieuwe blog... en deze keer ook de laatste. Het was een intensief traject, maar vooral eentje waar ik veel uit meeneem naar wat hierna komt.`
+  },
+  {
     slug: "week-15-bedrijfsbezoek-bij-pgb-en-verdere-technische-rsa-sessies",
     title: "Week 15: Bedrijfsbezoek bij PGB en verdere technische RSA-sessies",
     date: "2026-05-09",
@@ -19,7 +77,7 @@ export const posts: BlogPost[] = [
     intro:
       "Deze week werkte ik minder aan nieuwe projectfunctionaliteiten en lag de focus vooral op bredere SAP-kennis, consultancycontext en technische verdieping.",
     readingMinutes: 9,
-    tags: ["rsa", "sap", "consultancy"],
+    tags: ["rsa", "lessons learned", "reflectie"],
     content: `Week 15 – Bedrijfsbezoek bij PGB en verdere technische RSA-sessies
 
 Week 15 stond vooral in het teken van de Rising Star Academy. Deze week heb ik minder aan nieuwe functionaliteiten binnen mijn stageproject gewerkt, maar vooral veel bijgeleerd via technische sessies, oefeningen en een bedrijfsbezoek. De focus lag op het breder begrijpen van SAP-processen, technische ontwikkelmodellen en hoe consultancyprojecten in de praktijk worden aangepakt.
@@ -91,7 +149,7 @@ Deze week heeft mij vooral geholpen om niet alleen als developer naar mijn proje
     intro:
       "De focus verschoof van nieuwe features bouwen naar professioneel afronden, documenteren en de proof of concept technisch verdedigbaar maken.",
     readingMinutes: 10,
-    tags: ["documentatie", "alert-notification", "rsa"],
+    tags: ["documentatie", "rsa", "wins"],
     content: `Week 14 – Afronding Alert Notification, technische einddocumentatie en RSA
 
 Week 14 stond vooral in het teken van afronding en documentatie. Nadat ik in week 13 de basis had gelegd voor scheduled indexation en notificaties via SAP Alert Notification, heb ik deze week de Alert Notification flow verder afgewerkt en daarnaast gewerkt aan de technische eindblueprint van de CPQ Indexation applicatie.
@@ -167,7 +225,7 @@ Deze week heeft het project meer maturiteit gekregen. De applicatie is niet lang
     intro:
       "Naast de manuele indexatieflow onderzocht ik hoe dezelfde logica automatisch of periodiek kan worden uitgevoerd en hoe gebruikers daarna duidelijke meldingen kunnen krijgen.",
     readingMinutes: 9,
-    tags: ["automation", "notifications", "rsa"],
+    tags: ["code", "lessons learned", "wins"],
     content: `Week 13 – Automatisatie, notificaties en eerste RSA-lessen
 
 Week 13 stond vooral in het teken van automatisatie en operationele afwerking. In de vorige weken lag de focus vooral op het manueel uitvoeren van de indexatieflow via de applicatie: een quote selecteren, een preview bekijken en daarna bevestigen zodat CPQ een nieuwe revision aanmaakt.
@@ -229,7 +287,7 @@ De combinatie van Job Scheduler en Alert Notification maakt de applicatie profes
     intro:
       "De basisfunctionaliteit was aanwezig, maar deze week lag de nadruk op betrouwbaarheid: frontend, backend, replicatie en CPQ moesten correct op elkaar aansluiten.",
     readingMinutes: 9,
-    tags: ["debugging", "stabilisatie", "cpq"],
+    tags: ["code", "fails", "lessons learned"],
     content: `Week 12 – Stabiliseren van preview-, confirm- en indexatieflows
 
 In week 12 lag de nadruk vooral op het volledig stabiel maken van de belangrijkste gebruikersflows in de applicatie. Hoewel de basisfunctionaliteit al aanwezig was, kwamen er tijdens het testen nog verschillende problemen naar boven in de preview-, confirm- en redirectlogica.
@@ -301,7 +359,7 @@ Door deze problemen stap voor stap weg te werken, is de applicatie nu veel stabi
     intro:
       "Na de UI-verfijning van week 10 lag de nadruk nu op schaalbaarheid, stabielere data-ophaling en een robuustere basis voor grotere hoeveelheden quotes.",
     readingMinutes: 8,
-    tags: ["hana", "replicatie", "performantie"],
+    tags: ["code", "wins", "lessons learned"],
     content: `Week 11 – Replicatie, HANA-deployment en performantieverbeteringen
 
 Na de focus op UI-verfijning en code-opdeling in week 10, verschoof de aandacht in week 11 meer naar de achterkant van de applicatie. De belangrijkste doelstelling was deze week om de performantie en stabiliteit van de data-ophaling te verbeteren, zodat de applicatie ook met grotere hoeveelheden quotes bruikbaar bleef.
@@ -351,7 +409,7 @@ Door de replicatie naar HANA, de integratie van de Job Scheduler en de verdere o
     intro:
       "Na de belangrijkste functionele uitbreidingen verschoof de focus naar kwaliteit: de applicatie moest niet alleen werken, maar ook duidelijker, gebruiksvriendelijker en onderhoudbaarder worden.",
     readingMinutes: 8,
-    tags: ["ui", "refactor", "hana"],
+    tags: ["code", "reflectie", "wins"],
     content: `Week 10 – UI-verfijning, gebruiksvriendelijkheid en technische opsplitsing
 
 Week 10 stond vooral in het teken van verfijning. Nadat de belangrijkste flows technisch werkten, lag de focus nu op het verbeteren van de gebruikerservaring, het duidelijker presenteren van gegevens en het structureel opsplitsen van de code zodat de applicatie onderhoudbaarder wordt.
@@ -401,7 +459,7 @@ Dat maakte het project niet alleen beter voor de demo, maar ook sterker als basi
     intro:
       "De flow evolueerde van een eenvoudige indexatie op quote-niveau naar een veel flexibelere oplossing met bulkacties en fijnmazigere controle.",
     readingMinutes: 8,
-    tags: ["indexatie", "uitbreiding", "cpq"],
+    tags: ["code", "fails", "wins"],
     content: `Week 9 – Ondersteuning voor meerdere quotes en indexatie op itemniveau
 
 Week 9 draaide vooral rond het functioneel uitbreiden van de indexatieflow. Waar de applicatie eerst vooral gericht was op het indexeren van een volledige quote, heb ik deze week gewerkt aan scenario's die veel dichter aanleunen bij echte businessnoden: meerdere quotes tegelijk indexeren en indexatie op individuele producten ondersteunen.
@@ -443,7 +501,7 @@ De volgende stap was om die uitgebreidere functionaliteiten visueel en structure
     intro:
       "De basisflow werkte al, maar deze week verschoof de focus naar rijkere data, betere filters en een applicatie die inhoudelijk beter aansluit bij de eindgebruiker.",
     readingMinutes: 7,
-    tags: ["services", "cds", "verfijning"],
+    tags: ["code", "lessons learned", "reflectie"],
     content: `Week 8 – Verdere uitbouw van de services en verfijning van de applicatie
 
 Week 8 stond vooral in het teken van het verder uitbouwen van de backendservices en het verfijnen van de gegevens die in de applicatie getoond worden. Waar de vorige fase vooral draaide rond het werkend krijgen van de basisflow, lag de focus deze week op het sterker maken van de read flow en het uitbreiden van de functionele dekking van de applicatie.
@@ -495,7 +553,7 @@ De volgende stap was om die uitgebreidere basis verder om te zetten naar concret
     intro:
       "Naast technische uitbreidingen aan de applicatie kreeg ik deze week gerichte feedback van mijn mentoren over de volgende stappen, zowel op technisch als communicatief vlak.",
     readingMinutes: 9,
-    tags: ["deployment", "feedback", "cap"],
+    tags: ["feedback", "wins", "reflectie"],
     content: `Week 7 – Uitbreiding, Feedback en Deployment
 
 Week 7 stond vooral in het teken van verdere uitbreiding van de applicatie. Waar de vorige week draaide rond het werkend krijgen van de volledige flow, lag de focus nu op het toevoegen van extra services, het verder uitwerken van de preview flow in CAP en het deployen van de applicatie.
@@ -639,7 +697,7 @@ De volgende stap is nu om deze opmerkingen systematisch te verwerken in de appli
     intro:
       "De verschillende onderdelen van het project kwamen samen in een werkende applicatie: CPQ, API's, CAP, Fiori elements en de indexatieflow op SAP BTP.",
     readingMinutes: 9,
-    tags: ["cap", "fiori", "integratie"],
+    tags: ["code", "wins", "lessons learned"],
     content: `Week 6 – Integratie van CAP en Fiori
 
 Week 6 stond volledig in het teken van de ontwikkeling van de applicatie zelf. Waar week 5 vooral draaide rond het bouwen en testen van het custom CPQ API script, ging de focus deze week naar het bouwen van de backend met SAP CAP en de frontend met SAP Fiori elements. In deze fase begon alles samen te komen: de CPQ configuratie, de API's en de applicatie op SAP BTP.
@@ -802,7 +860,7 @@ Na deze week was de applicatie technisch gezien al volledig klaar. De volgende s
     intro:
       "Na de voorbereiding en architectuur van de vorige weken verschoof de focus volledig naar implementatie, testen en het automatiseren van de indexatieflow in SAP CPQ.",
     readingMinutes: 8,
-    tags: ["ontwikkeling", "api", "cpq"],
+    tags: ["code", "fails", "reflectie"],
     content: `Week 5 – Start van de ontwikkeling
 
 Week 5 was de week waarin ik eindelijk echt kon beginnen aan het technische gedeelte van mijn project. Na de voorbereiding, architectuur en blueprint van de vorige weken, ging de focus nu volledig naar het ontwikkelen en testen van de integratie met SAP CPQ.
@@ -904,7 +962,7 @@ De volgende stap is om het script volledig stabiel te krijgen en daarna de integ
     intro:
       "Na het afronden en verdedigen van mijn blueprint ben ik gestart met de praktische opbouw van het project, inclusief testdata en voorbereiding volgens het stappenplan.",
     readingMinutes: 6,
-    tags: ["blueprint", "projectstart", "cpq"],
+    tags: ["project", "reflectie", "lessons learned"],
     content: `Week 4 – Van Blueprint naar Opstart
 
 Week 4 stond in het teken van afronden en starten. Ik was nog bezig met de laatste verbeteringen aan mijn blueprint, maar tegelijk kwam ook het moment dichterbij om effectief aan de applicatie te beginnen.
@@ -942,7 +1000,7 @@ Deze week voelde als de overgang van documentatie naar uitvoering. De voorbereid
     intro:
       "De focus verschoof van use case-begrip naar een technisch correcte en professioneel gedocumenteerde oplossing met duidelijke scope en planning.",
     readingMinutes: 9,
-    tags: ["architectuur", "fiori", "cpq"],
+    tags: ["project", "lessons learned", "reflectie"],
     content: `Week 3 – Van Blueprint naar Architectuur
 
 Week 3 stond volledig in het teken van verdieping en structureren. Waar week 2 draaide rond het begrijpen van de use case en het grotere geheel, ging week 3 over het concreet maken van mijn oplossing: technisch correct, logisch opgebouwd en onderbouwd in een blueprint.
@@ -1126,7 +1184,7 @@ Volgende stap: effectief beginnen bouwen.`
     intro:
       "Na de basis van week 1 begon alles samen te vallen: CPQ, API's, BTP, CAP, Cloud Foundry en Fiori kregen een duidelijke plaats binnen mijn project.",
     readingMinutes: 8,
-    tags: ["cpq", "btp", "projectstart"],
+    tags: ["project", "teambuilding", "lessons learned"],
     content: `Week 2 – Van Training naar Projectstart
 
 Na een eerste week vol onboarding en basisopleiding in CPQ, begon week 2 meteen een stuk concreter aan te voelen. Waar week 1 draaide rond begrijpen wat CPQ is en hoe het werkt, ging week 2 meer richting: wat ga ik hier effectief bouwen?

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Ilias Hamdaoui profile visual</title>
+  <desc id="desc">A clean profile visual with initials for the stage portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="82" x2="558" y1="68" y2="572" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12343b"/>
+      <stop offset=".48" stop-color="#0f6b62"/>
+      <stop offset="1" stop-color="#e97a30"/>
+    </linearGradient>
+    <linearGradient id="card" x1="150" x2="490" y1="118" y2="532" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffefb"/>
+      <stop offset="1" stop-color="#f7f1e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="72" fill="url(#bg)"/>
+  <circle cx="510" cy="138" r="74" fill="#fffefb" opacity=".18"/>
+  <circle cx="132" cy="500" r="96" fill="#fffefb" opacity=".13"/>
+  <rect x="126" y="112" width="388" height="416" rx="42" fill="url(#card)" opacity=".96"/>
+  <circle cx="320" cy="238" r="76" fill="#12343b"/>
+  <path fill="#12343b" d="M197 448c16-68 62-108 123-108s107 40 123 108c4 18-10 34-29 34H226c-19 0-33-16-29-34Z"/>
+  <text x="320" y="268" text-anchor="middle" font-family="Avenir Next, Trebuchet MS, sans-serif" font-size="76" font-weight="800" fill="#fffefb">IH</text>
+  <path fill="#e97a30" d="M214 164h212c13 0 24 11 24 24s-11 24-24 24H214c-13 0-24-11-24-24s11-24 24-24Z" opacity=".16"/>
+</svg>

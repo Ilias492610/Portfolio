@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
-import { BlogCard } from "@/components/blog-card";
+import { BlogFilter } from "@/components/blog-filter";
 import { getSortedPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
@@ -13,17 +14,36 @@ export default function BlogPage() {
   return (
     <>
       <section className="blog-header reveal">
-        <p className="eyebrow">Stageblog</p>
-        <h1>Wekelijkse updates en lessons learned</h1>
-        <p>Overzicht van mijn blogposts tijdens de stage.</p>
+        <div className="blog-header__layout">
+          <Image
+            src="/ilias-profile.svg"
+            alt="Ilias Hamdaoui"
+            className="blog-header__image"
+            width={120}
+            height={120}
+          />
+          <div>
+            <p className="eyebrow">Stageblog</p>
+            <h1>Wekelijkse updates, code, fails en lessons learned</h1>
+            <p>
+              Mijn stage bij TheValueChain, van CPQ-training tot een BTP-app met
+              CAP, Fiori, HANA, scheduling en notificaties. Je kan filteren op
+              tags of alle posts volledig onder elkaar lezen.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/ilias-h-670a6a17a/?isSelfProfile=true"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-link"
+            >
+              LinkedIn-profiel
+            </a>
+          </div>
+        </div>
       </section>
 
       <section>
-        <div className="post-grid">
-          {posts.map((post, index) => (
-            <BlogCard key={post.slug} post={post} delay={index * 60} />
-          ))}
-        </div>
+        <BlogFilter posts={posts} />
       </section>
     </>
   );

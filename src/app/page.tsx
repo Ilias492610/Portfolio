@@ -18,8 +18,9 @@ export default function HomePage() {
         </h1>
         <p className="hero__text">
           Ik ben Ilias Hamdaoui, stagiair softwareontwikkeling. Op deze website
-          deel ik mijn stageverloop bij TheValueChain, met focus op onboarding,
-          CPQ-trainingen en mijn eerste technische stappen binnen SAP-context.
+          deel ik mijn stageverloop bij TheValueChain, van onboarding en
+          CPQ-training tot een BTP proof of concept met CAP, Fiori, HANA,
+          Job Scheduler en Alert Notification.
         </p>
         <div className="hero__actions">
           <Link href="/blog" className="button button--primary">
@@ -45,7 +46,7 @@ export default function HomePage() {
 
       <section className="reveal" style={{ animationDelay: "180ms" }}>
         <div className="section-title-row">
-          <h2>Highlights uit Week 1</h2>
+          <h2>Laatste blogposts</h2>
           <Link href="/blog" className="inline-link">
             Alle posts
           </Link>

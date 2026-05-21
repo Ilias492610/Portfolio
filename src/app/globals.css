@@ -330,14 +330,36 @@ a {
   max-width: 68ch;
 }
 
+.blog-header__layout {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.blog-header__image {
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 22px;
+  border: 1px solid rgba(31, 39, 49, 0.12);
+  object-fit: cover;
+  box-shadow: 0 14px 28px rgba(31, 39, 49, 0.12);
+}
+
+.blog-controls {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
 .tag-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
-.tag-filter__button {
+.tag-filter__button,
+.view-toggle__button {
   border: 1px solid rgba(31, 39, 49, 0.2);
   background: #fff;
   color: #273341;
@@ -347,10 +369,17 @@ a {
   font-weight: 600;
 }
 
-.tag-filter__button.is-active {
+.tag-filter__button.is-active,
+.view-toggle__button.is-active {
   color: #fff;
   background: linear-gradient(120deg, #b04b00, #e97a30);
   border-color: transparent;
+}
+
+.view-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .empty-state {
@@ -365,6 +394,23 @@ a {
   padding: clamp(1.1rem, 3vw, 2rem);
   max-width: 880px;
   margin-inline: auto;
+}
+
+.blog-post--inline {
+  max-width: none;
+  margin: 0;
+}
+
+.blog-post--inline h2 {
+  margin: 0.45rem 0 0.5rem;
+  font-family: "Fraunces", "Iowan Old Style", "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.7vw, 2rem);
+  line-height: 1.18;
+}
+
+.full-post-list {
+  display: grid;
+  gap: 1.2rem;
 }
 
 .blog-post__intro {
@@ -591,6 +637,14 @@ a {
   .section-title-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .blog-header__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-header__image {
+    width: 96px;
   }
 
   .post-card__meta {

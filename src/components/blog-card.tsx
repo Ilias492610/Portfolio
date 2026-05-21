@@ -13,6 +13,15 @@ export function BlogCard({ post, delay = 0 }: BlogCardProps) {
     <article className="post-card reveal" style={{ animationDelay: `${delay}ms` }}>
       <div className="post-card__meta">
         <span>{formatDate(post.date)}</span>
+        <span>{post.readingMinutes} min</span>
+      </div>
+
+      <div className="tag-list">
+        {post.tags.map((tag) => (
+          <span key={tag} className="tag">
+            {tag}
+          </span>
+        ))}
       </div>
 
       <h3>{post.title}</h3>
