@@ -17,12 +17,12 @@ export const posts: BlogPost[] = [
     excerpt:
       "Mijn laatste stageblog: een terugblik op het volledige traject, van eerste CPQ-trainingen tot een volwassen BTP proof of concept.",
     intro:
-      "Nieuwe week, nieuwe blog... maar deze keer voelt het anders. Dit is mijn laatste stageblog en dus ook het moment om terug te kijken op wat ik technisch en persoonlijk heb geleerd.",
+      "Na maanden bouwen, testen, bijsturen en bijleren is dit mijn afsluitende terugblik op een stage die technisch en persoonlijk veel groter werd dan ik in het begin had verwacht.",
     readingMinutes: 7,
     tags: ["reflectie", "lessons learned", "wins"],
     content: `Laatste stageblog: terugblik op mijn stage
 
-Nieuwe week, nieuwe blog... maar deze keer voelt het toch anders. Ondertussen zit mijn stage er bijna op en als ik terugkijk naar de voorbije weken, is er veel meer gebeurd dan ik in het begin had verwacht.
+Dit is mijn laatste stageblog. Niet gewoon nog een update over wat ik deze week heb gedaan, maar een moment om even terug te kijken op het volledige traject. Ondertussen zit mijn stage er bijna op en als ik alles naast elkaar leg, is er veel meer gebeurd dan ik in het begin had verwacht.
 
 Wat startte met onboarding, CPQ-trainingen en veel nieuwe termen, groeide uiteindelijk uit tot een project waarin ik echt een volledige oplossing heb mogen uitwerken. Van scripting in SAP CPQ tot CAP-services, Fiori-schermen, HANA-replicatie, Job Scheduler en Alert Notification: stap voor stap kwam alles samen.
 
@@ -66,7 +66,7 @@ Ik heb geleerd dat fouten en blokkades erbij horen. Niet alles werkt van de eers
 
 Ik kijk met een positief gevoel terug op deze stage. Ik heb veel nieuwe technologieën leren kennen, aan een echte businesscase gewerkt en beter begrepen hoe SAP-projecten in de praktijk opgebouwd worden.
 
-En daarmee sluit ik mijn stageblog af. Nieuwe week, nieuwe blog... en deze keer ook de laatste. Het was een intensief traject, maar vooral eentje waar ik veel uit meeneem naar wat hierna komt.`
+En daarmee sluit ik mijn stageblog af. Het was een intensief traject, met veel nieuwe technologie, technische uitdagingen, feedbackmomenten en kleine overwinningen onderweg. Vooral neem ik mee dat groei vaak niet in een keer gebeurt, maar stap voor stap, probleem per probleem en week per week.`
   },
   {
     slug: "week-15-bedrijfsbezoek-bij-pgb-en-verdere-technische-rsa-sessies",
