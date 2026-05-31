@@ -343,6 +343,7 @@ a {
   border-radius: 22px;
   border: 1px solid rgba(31, 39, 49, 0.12);
   object-fit: cover;
+  object-position: center 42%;
   box-shadow: 0 14px 28px rgba(31, 39, 49, 0.12);
 }
 
@@ -480,10 +481,13 @@ a {
 
 .profile-image {
   width: 100%;
+  aspect-ratio: 1;
   height: auto;
   border-radius: 16px;
   border: 1px solid rgba(31, 39, 49, 0.1);
   margin-bottom: 0.75rem;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 .profile-card h1 {

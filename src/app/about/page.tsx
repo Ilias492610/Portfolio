@@ -11,7 +11,7 @@ export default function AboutPage() {
       <div className="about-grid">
         <article className="profile-card">
           <Image
-            src="/ilias-profile.svg"
+            src="/ilias-profile.jpg"
             alt="Ilias Hamdaoui"
             className="profile-image"
             width={320}

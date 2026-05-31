@@ -16,7 +16,7 @@ export default function BlogPage() {
       <section className="blog-header reveal">
         <div className="blog-header__layout">
           <Image
-            src="/ilias-profile.svg"
+            src="/ilias-profile.jpg"
             alt="Ilias Hamdaoui"
             className="blog-header__image"
             width={120}
